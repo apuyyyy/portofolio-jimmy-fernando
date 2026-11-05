@@ -1,1350 +1,1129 @@
-<!DOCTYPE html>
-<html lang="id" class="scroll-smooth">
+<!doctype html>
+<html lang="id" data-theme="light">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Jimmy Fernando — Fullstack Developer & UI/UX Enthusiast</title>
-    <meta name="description" content="Portofolio profesional Jimmy Fernando — Fullstack Developer, UI/UX Designer, dan Sarjana Sistem Informasi.">
-    <script src="https://cdn.tailwindcss.com"></script>
-    <script>
-        tailwind.config = {
-            darkMode: 'class',
-            theme: {
-                extend: {
-                    fontFamily: {
-                        sans: ['Inter', 'system-ui', 'sans-serif'],
-                        display: ['Poppins', 'system-ui', 'sans-serif'],
-                    },
-                    colors: {
-                        primary: {
-                            50: '#eef2ff', 100: '#e0e7ff', 200: '#c7d2fe', 300: '#a5b4fc',
-                            400: '#818cf8', 500: '#6366f1', 600: '#4f46e5', 700: '#4338ca',
-                            800: '#3730a3', 900: '#312e81', 950: '#1e1b4b',
-                        },
-                        dark: {
-                            bg: '#0f172a', card: '#1e293b', border: '#334155',
-                        }
-                    },
-                    animation: {
-                        'fade-in': 'fadeIn 0.6s ease-out forwards',
-                        'slide-up': 'slideUp 0.6s ease-out forwards',
-                        'slide-left': 'slideLeft 0.6s ease-out forwards',
-                        'slide-right': 'slideRight 0.6s ease-out forwards',
-                        'scale-in': 'scaleIn 0.5s ease-out forwards',
-                        'float': 'float 6s ease-in-out infinite',
-                        'pulse-slow': 'pulse 4s cubic-bezier(0.4, 0, 0.6, 1) infinite',
-                        'gradient': 'gradient 8s ease infinite',
-                    },
-                }
-            }
-        }
-    </script>
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=Poppins:wght@600;700;800;900&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.1/css/all.min.css">
-    <style>
-        @keyframes fadeIn { from { opacity: 0; } to { opacity: 1; } }
-        @keyframes slideUp { from { opacity: 0; transform: translateY(40px); } to { opacity: 1; transform: translateY(0); } }
-        @keyframes slideLeft { from { opacity: 0; transform: translateX(40px); } to { opacity: 1; transform: translateX(0); } }
-        @keyframes slideRight { from { opacity: 0; transform: translateX(-40px); } to { opacity: 1; transform: translateX(0); } }
-        @keyframes scaleIn { from { opacity: 0; transform: scale(0.9); } to { opacity: 1; transform: scale(1); } }
-        @keyframes float { 0%, 100% { transform: translateY(0px); } 50% { transform: translateY(-20px); } }
-        @keyframes gradient { 0% { background-position: 0% 50%; } 50% { background-position: 100% 50%; } 100% { background-position: 0% 50%; } }
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#f3f0e8" />
+  <meta name="description" content="Jimmy Fernando — Fullstack Developer & Information Systems graduate from Jakarta, Indonesia." />
+  <meta property="og:type" content="website" />
+  <meta property="og:title" content="Jimmy Fernando — Selected work & background" />
+  <meta property="og:description" content="Fullstack developer & UI/UX enthusiast. Building practical, user-centered web applications." />
+  <meta property="og:url" content="https://portofolio-jimmy-fernando.vercel.app/" />
+  <meta name="color-scheme" content="light dark" />
+  <title>Jimmy Fernando — Fullstack Developer & Information Systems</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=DM+Mono:wght@400;500&family=DM+Sans:wght@400;500;600;700&family=Instrument+Serif:ital@0;1&display=swap" rel="stylesheet" />
+  <script>
+    document.documentElement.classList.add('js');
+    try {
+      const savedTheme = localStorage.getItem('portfolio-theme');
+      if (savedTheme === 'dark' || savedTheme === 'light') document.documentElement.dataset.theme = savedTheme;
+    } catch (_) {}
+  </script>
+  <script>tailwind = { config: { corePlugins: { preflight: false } } };</script>
+  <script src="https://cdn.tailwindcss.com"></script>
+  <style>
+    :root {
+      color-scheme: light;
+      --paper: #f3f0e8;
+      --surface: #faf8f2;
+      --surface-raised: #eae7dc;
+      --ink: #1f3027;
+      --muted: #5b6960;
+      --line: rgba(31, 48, 39, .16);
+      --line-strong: rgba(31, 48, 39, .27);
+      --accent: #476a51;
+      --accent-strong: #304f3b;
+      --accent-wash: #e3e9df;
+      --gold: #80643a;
+      --shadow: 0 18px 50px rgba(35, 43, 35, .08);
+      --header-bg: rgba(243, 240, 232, .9);
+    }
+    html[data-theme="dark"] {
+      color-scheme: dark;
+      --paper: #111815;
+      --surface: #19221d;
+      --surface-raised: #202b24;
+      --ink: #f0eee5;
+      --muted: #b6beb4;
+      --line: rgba(240, 238, 229, .13);
+      --line-strong: rgba(240, 238, 229, .23);
+      --accent: #d2bd8d;
+      --accent-strong: #e4d2a8;
+      --accent-wash: #29352b;
+      --gold: #d2bd8d;
+      --shadow: 0 20px 60px rgba(0, 0, 0, .22);
+      --header-bg: rgba(17, 24, 21, .9);
+    }
+    * { box-sizing: border-box; }
+    html { scroll-behavior: smooth; scroll-padding-top: 96px; }
+    body { margin: 0; background: var(--paper); color: var(--ink); font-family: 'DM Sans', sans-serif; font-size: 15px; -webkit-font-smoothing: antialiased; transition: background-color .24s ease, color .24s ease; }
+    body, button, input, textarea { font-family: 'DM Sans', sans-serif; }
+    ::selection { background: var(--accent-wash); color: var(--ink); }
+    a { color: inherit; text-decoration: none; }
+    button, input, textarea { font: inherit; }
+    button { color: inherit; }
+    img, svg { display: block; }
+    figure { margin: 0; }
+    .page { width: min(1120px, calc(100% - 64px)); margin-inline: auto; }
+    .serif { font-family: 'Instrument Serif', Georgia, serif; font-weight: 400; letter-spacing: -.035em; }
+    .mono { font-family: 'DM Mono', monospace; }
+    .muted { color: var(--muted); }
+    .skip-link { position: fixed; top: 10px; left: 10px; z-index: 50; transform: translateY(-160%); padding: 11px 14px; border-radius: 2px; background: var(--ink); color: var(--paper); }
+    .skip-link:focus { transform: translateY(0); }
+    .progress-track { position: fixed; top: 0; left: 0; z-index: 60; width: 100%; height: 2px; pointer-events: none; }
+    .progress-bar { width: 0; height: 100%; background: var(--gold); transition: width .08s linear; }
+    .site-header { position: sticky; top: 0; z-index: 40; background: var(--header-bg); border-bottom: 1px solid var(--line); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px); }
+    .header-inner { min-height: 76px; display: grid; grid-template-columns: 1fr auto 1fr; align-items: center; gap: 28px; }
+    .brand { display: inline-flex; width: fit-content; align-items: center; }
+    .brand-name { font-size: 13px; font-weight: 700; letter-spacing: -.02em; }
+    .brand-caption { display: block; margin-top: 4px; color: var(--muted); font: 9px 'DM Mono', monospace; letter-spacing: .04em; text-transform: uppercase; }
+    .nav { display: flex; align-items: center; gap: clamp(16px, 2.5vw, 32px); }
+    .nav a { position: relative; display: inline-flex; min-height: 44px; align-items: center; color: var(--muted); font-size: 11px; font-weight: 600; transition: color .18s ease; }
+    .nav a::after { position: absolute; right: 0; bottom: 8px; left: 0; height: 1px; background: var(--accent); content: ''; transform: scaleX(0); transform-origin: right; transition: transform .2s ease; }
+    .nav a:hover, .nav a[aria-current="location"] { color: var(--ink); }
+    .nav a:hover::after, .nav a[aria-current="location"]::after { transform: scaleX(1); transform-origin: left; }
+    .header-tools { display: flex; justify-content: flex-end; align-items: center; gap: 8px; }
+    .lang-switch { display: flex; align-items: center; gap: 2px; padding-right: 10px; border-right: 1px solid var(--line); }
+    .control { display: inline-flex; min-width: 38px; min-height: 42px; align-items: center; justify-content: center; border: 0; border-radius: 2px; padding: 7px; background: transparent; color: var(--muted); font: 10px 'DM Mono', monospace; cursor: pointer; transition: background .18s ease, color .18s ease; }
+    .control:hover { background: var(--accent-wash); color: var(--ink); }
+    .control[aria-pressed="true"] { color: var(--ink); font-weight: 700; }
+    .theme-button { width: 42px; font-size: 16px; }
+    :focus-visible { outline: 2px solid var(--accent); outline-offset: 3px; }
+    .hero { display: grid; grid-template-columns: minmax(0, 1.18fr) minmax(270px, .82fr); gap: clamp(46px, 8vw, 112px); align-items: center; padding: clamp(50px, 6vw, 72px) 0 44px; }
+    .section-kicker { color: var(--accent-strong); font: 10px 'DM Mono', monospace; letter-spacing: .11em; text-transform: uppercase; }
+    .hero-topline { display: flex; flex-wrap: wrap; align-items: center; gap: 10px 16px; margin-bottom: 24px; }
+    .status-pill { display: inline-flex; min-height: 30px; align-items: center; gap: 8px; border: 1px solid var(--line-strong); border-radius: 99px; padding: 0 10px; color: var(--accent-strong); font: 9px 'DM Mono', monospace; letter-spacing: .04em; text-transform: uppercase; }
+    .status-dot { width: 7px; height: 7px; border-radius: 50%; background: #668b6a; box-shadow: 0 0 0 3px color-mix(in srgb, #668b6a 16%, transparent); }
+    html[data-theme="dark"] .status-dot { background: #a9c28d; box-shadow: 0 0 0 3px rgba(169, 194, 141, .14); }
+    .hero-location { color: var(--muted); font: 9px 'DM Mono', monospace; letter-spacing: .07em; text-transform: uppercase; }
+    .hero-title { max-width: 720px; margin: 0 0 17px; font-size: clamp(54px, 6.5vw, 78px); line-height: .92; }
+    .hero-title em { color: var(--accent); font-weight: 400; font-style: italic; }
+    .hero-focus { margin: 0 0 8px; color: var(--accent-strong); font-size: 12px; font-weight: 700; letter-spacing: -.01em; }
+    .hero-copy { max-width: 560px; margin: 0; color: var(--muted); font-size: 13.5px; line-height: 1.75; }
+    .hero-actions { display: flex; flex-wrap: wrap; align-items: center; gap: 14px; margin-top: 30px; }
+    .button { display: inline-flex; min-height: 46px; justify-content: center; align-items: center; gap: 18px; border: 1px solid var(--accent-strong); border-radius: 2px; padding: 0 17px; color: var(--paper); background: var(--accent-strong); font-size: 11px; font-weight: 700; transition: transform .18s ease, background .18s ease, border-color .18s ease, color .18s ease; cursor: pointer; }
+    .button:hover { transform: translateY(-2px); background: var(--accent); border-color: var(--accent); }
+    .button-secondary { background: transparent; color: var(--ink); border-color: var(--line-strong); }
+    .button-secondary:hover { background: var(--accent-wash); border-color: var(--accent); color: var(--ink); }
+    .button-arrow { color: var(--gold); font-size: 14px; font-weight: 400; }
+    .hero-art { position: relative; min-height: 350px; overflow: hidden; border: 1px solid var(--line-strong); border-radius: 3px; background: var(--surface); box-shadow: var(--shadow); isolation: isolate; }
+    .hero-art::before { position: absolute; z-index: 3; top: 26px; right: 25px; bottom: 26px; left: 25px; border: 1px solid var(--line); content: ''; pointer-events: none; }
+    .art-grid { position: absolute; inset: 0; z-index: 0; opacity: .38; background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 38px 38px; mask-image: linear-gradient(to bottom, black, transparent 90%); }
+    .art-portrait { position: absolute; z-index: 1; top: 45%; left: 50%; width: min(72%, 248px); aspect-ratio: 1; border: 1px solid var(--line-strong); object-fit: cover; object-position: center 20%; box-shadow: 0 18px 38px rgba(0, 0, 0, .14); transform: translate(-50%, -50%); transition: transform .35s ease, box-shadow .35s ease; border-radius: 2px; }
+    .hero-art:hover .art-portrait { box-shadow: 0 22px 42px rgba(0, 0, 0, .2); transform: translate(-50%, -50%) scale(1.025); }
+    .art-index { position: absolute; z-index: 4; top: 45px; left: 45px; color: var(--muted); font: 9px 'DM Mono', monospace; letter-spacing: .08em; }
+    .art-index::before { display: inline-block; width: 7px; height: 7px; margin-right: 8px; border-radius: 50%; background: var(--gold); content: ''; }
+    .art-signature { position: absolute; z-index: 4; right: 45px; bottom: 45px; left: 45px; }
+    .art-signature strong { display: block; font-size: 13px; letter-spacing: -.02em; }
+    .art-signature small { display: block; color: var(--muted); font: 9px 'DM Mono', monospace; }
+    .art-side-note { position: absolute; z-index: 4; right: 26px; bottom: 45px; writing-mode: vertical-rl; color: var(--muted); font: 9px 'DM Mono', monospace; letter-spacing: .07em; }
+    .core-skills { margin: 0 auto 15px; border-block: 1px solid var(--line-strong); }
+    .core-skills-heading { display: flex; justify-content: space-between; align-items: baseline; gap: 16px; padding: 14px 0 11px; }
+    .core-skills-heading h2 { margin: 0; color: var(--accent-strong); font: 10px 'DM Mono', monospace; letter-spacing: .1em; text-transform: uppercase; }
+    .core-skills-heading span { color: var(--muted); font-size: 9px; font-family: 'DM Mono', monospace; }
+    .core-skills-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); border-top: 1px solid var(--line); }
+    .core-skill { padding: 16px 19px 18px; border-right: 1px solid var(--line); }
+    .core-skill:first-child { padding-left: 0; }
+    .core-skill:last-child { padding-right: 0; border-right: 0; }
+    .core-skill h3 { margin: 0 0 7px; font-size: 13px; font-weight: 700; }
+    .subskill-label { display: block; margin-bottom: 6px; color: var(--muted); font: 8px 'DM Mono', monospace; letter-spacing: .07em; text-transform: uppercase; }
+    .core-skill p { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.7; }
+    .section { padding: 82px 0; border-bottom: 1px solid var(--line-strong); }
+    .section-heading { display: flex; justify-content: space-between; align-items: end; gap: 24px; margin-bottom: 32px; }
+    .section-kicker { margin: 0 0 10px; }
+    .section-title { margin: 0; font-size: clamp(34px, 4.3vw, 51px); line-height: .98; }
+    .section-note { max-width: 280px; margin: 0 0 3px; color: var(--muted); font-size: 11px; line-height: 1.65; text-align: right; font-family: 'DM Mono', monospace; }
+    .about-grid { display: grid; grid-template-columns: 1fr; gap: 24px; }
+    .about-copy { max-width: 680px; color: var(--muted); font-size: 14.5px; line-height: 1.85; }
+    .about-copy p { margin: 0 0 14px; }
+    .about-copy p:last-child { margin-bottom: 0; }
+    .timeline { position: relative; margin-left: 8px; padding-left: 31px; border-left: 1px solid var(--line-strong); }
+    .timeline-item { position: relative; display: grid; grid-template-columns: 150px minmax(0, 1fr); gap: 28px; padding: 0 0 38px; }
+    .timeline-item:last-child { padding-bottom: 0; }
+    .timeline-item::before { position: absolute; top: 5px; left: -37px; width: 11px; height: 11px; border: 2px solid var(--paper); border-radius: 50%; background: var(--gold); box-shadow: 0 0 0 1px var(--gold); content: ''; }
+    .timeline-date { color: var(--muted); font: 10px 'DM Mono', monospace; line-height: 1.7; }
+    .timeline-date strong { display: block; color: var(--ink); font-weight: 500; }
+    .timeline-role { margin: 0; font-size: 17px; font-weight: 700; letter-spacing: -.025em; }
+    .timeline-company { margin: 5px 0 11px; color: var(--accent-strong); font-size: 11px; font-weight: 600; }
+    .timeline-desc { max-width: 620px; margin: 0; color: var(--muted); font-size: 12px; line-height: 1.8; }
+    .timeline-desc ul { margin: 0; padding-left: 18px; }
+    .timeline-desc li { margin-bottom: 5px; }
+    .project-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 16px; }
+    .project-card { min-width: 0; overflow: hidden; border: 1px solid var(--line); border-radius: 3px; background: var(--surface); transition: transform .25s cubic-bezier(.2, .65, .3, 1), border-color .2s ease, box-shadow .2s ease; display: flex; flex-direction: column; }
+    .project-card:hover, .project-card:focus-within { transform: translateY(-3px) scale(1.012); border-color: var(--line-strong); box-shadow: var(--shadow); }
+    .project-art { position: relative; height: 190px; overflow: hidden; border-bottom: 1px solid var(--line); background: var(--surface-raised); display: flex; align-items: center; justify-content: center; }
+    .project-art-icon { font-size: 42px; opacity: .85; transition: transform .4s ease; }
+    .project-card:hover .project-art-icon { transform: scale(1.1); }
+    .project-art-label { position: absolute; top: 15px; left: 16px; color: var(--muted); font: 8px 'DM Mono', monospace; letter-spacing: .09em; text-transform: uppercase; }
+    .project-art-caption { position: absolute; right: 16px; bottom: 13px; left: 16px; color: var(--muted); font: 8.5px 'DM Mono', monospace; letter-spacing: .06em; text-transform: uppercase; }
+    .project-body { display: flex; min-height: 250px; flex-direction: column; padding: 19px; flex: 1; }
+    .project-meta { display: flex; justify-content: space-between; gap: 10px; color: var(--muted); font: 9px 'DM Mono', monospace; text-transform: uppercase; }
+    .project-index { color: var(--gold); }
+    .project-title { margin: 13px 0 8px; font-size: 16px; font-weight: 700; letter-spacing: -.025em; }
+    .project-desc { margin: 0; color: var(--muted); font-size: 11.5px; line-height: 1.75; flex: 1; }
+    .tag-list { display: flex; flex-wrap: wrap; gap: 6px; margin-top: 14px; }
+    .tag { border: 1px solid var(--line); border-radius: 99px; padding: 4px 8px; color: var(--muted); font: 8px 'DM Mono', monospace; }
+    .project-links { display: flex; flex-wrap: wrap; gap: 8px 16px; margin-top: auto; padding-top: 18px; }
+    .project-links button, .project-links a, .text-link { display: inline-flex; min-height: 34px; align-items: center; gap: 6px; color: var(--accent-strong); font-size: 10px; font-weight: 700; background: none; border: 0; padding: 0; cursor: pointer; transition: color .18s ease; }
+    .project-links button:hover, .project-links a:hover, .text-link:hover { color: var(--gold); }
+    .toolkit-grid { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 12px; }
+    .toolkit-card { min-height: 180px; padding: 19px; border: 1px solid var(--line); background: var(--surface); border-radius: 2px; }
+    .toolkit-icon { display: grid; width: 29px; height: 29px; place-items: center; border: 1px solid var(--line); color: var(--gold); font: 11px 'DM Mono', monospace; }
+    .toolkit-title { margin: 18px 0 9px; font-size: 13px; font-weight: 700; }
+    .toolkit-copy { margin: 0; color: var(--muted); font-size: 11px; line-height: 1.8; }
+    .toolkit-copy strong { color: var(--ink); font-weight: 600; }
+    .background-grid { display: grid; grid-template-columns: .86fr 1.14fr; gap: clamp(32px, 6vw, 72px); align-items: start; }
+    .subsection-title { display: flex; justify-content: space-between; align-items: baseline; gap: 15px; margin: 0 0 14px; font-size: 13px; font-weight: 700; }
+    .subsection-count { color: var(--muted); font: 9px 'DM Mono', monospace; font-weight: 400; }
+    .education-list, .certificate-list { margin: 0; padding: 0; list-style: none; border-top: 1px solid var(--line-strong); }
+    .education-item, .certificate-item { display: grid; grid-template-columns: minmax(0, 1fr) auto; gap: 14px; align-items: start; padding: 14px 0; border-bottom: 1px solid var(--line); }
+    .education-item strong, .certificate-item strong { display: block; font-size: 12px; font-weight: 700; }
+    .education-item small, .certificate-item small { display: block; margin-top: 4px; color: var(--muted); font-size: 10.5px; line-height: 1.6; }
+    .education-meta { color: var(--muted); font: 9px 'DM Mono', monospace; line-height: 1.7; text-align: right; }
+    .education-meta b { color: var(--ink); font-weight: 500; }
+    .certificate-item a { display: inline-flex; min-width: 64px; min-height: 36px; justify-content: flex-end; align-items: center; gap: 5px; color: var(--accent-strong); font-size: 9.5px; font-weight: 700; white-space: nowrap; }
+    .certificate-item a:hover { color: var(--gold); }
+    .contact-section { padding: 92px 0 78px; border-bottom: 1px solid var(--line-strong); }
+    .contact-grid { display: grid; grid-template-columns: minmax(0, .9fr) minmax(320px, 1.1fr); gap: clamp(42px, 8vw, 112px); align-items: start; }
+    .contact-title { max-width: 490px; margin: 14px 0 15px; font-size: clamp(46px, 6vw, 72px); line-height: .9; }
+    .contact-intro { max-width: 390px; margin: 0; color: var(--muted); font-size: 12.5px; line-height: 1.8; }
+    .contact-links { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 9px; margin-top: 27px; }
+    .contact-link { display: flex; min-height: 64px; flex-direction: column; justify-content: center; gap: 5px; border: 1px solid var(--line); padding: 10px 12px; transition: border-color .18s ease, background .18s ease; }
+    .contact-link:hover { border-color: var(--accent); background: var(--surface); }
+    .contact-link small { color: var(--muted); font: 8px 'DM Mono', monospace; letter-spacing: .08em; text-transform: uppercase; }
+    .contact-link span { overflow-wrap: anywhere; color: var(--accent-strong); font-size: 10.5px; font-weight: 600; }
+    .contact-form { display: grid; gap: 12px; padding: 22px; border: 1px solid var(--line); background: var(--surface); border-radius: 2px; }
+    .form-heading { margin: 0 0 2px; font-size: 12px; font-weight: 700; }
+    .field { display: grid; gap: 6px; }
+    .field label { color: var(--muted); font: 9px 'DM Mono', monospace; letter-spacing: .05em; text-transform: uppercase; }
+    .field input, .field textarea { width: 100%; min-height: 43px; border: 1px solid var(--line-strong); border-radius: 2px; padding: 10px 11px; outline: none; background: var(--paper); color: var(--ink); font-size: 11px; transition: border-color .18s ease, box-shadow .18s ease; }
+    .field textarea { min-height: 105px; resize: vertical; }
+    .field input:focus, .field textarea:focus { border-color: var(--accent); box-shadow: 0 0 0 3px var(--accent-wash); }
+    .form-submit { justify-self: start; margin-top: 2px; cursor: pointer; }
+    .form-note { margin: 0; color: var(--muted); font-size: 9px; line-height: 1.6; }
+    .form-status { min-height: 15px; margin: 0; color: var(--accent-strong); font-size: 10px; font-family: 'DM Mono', monospace; }
+    .site-footer { display: flex; justify-content: space-between; gap: 16px; padding: 21px 0 28px; color: var(--muted); font: 9.5px 'DM Mono', monospace; }
+    .site-footer span:last-child { text-align: right; }
+    html.js .reveal { opacity: 0; transform: translateY(14px); transition: opacity .55s ease, transform .55s cubic-bezier(.2, .65, .3, 1); }
+    html.js .reveal.is-visible { opacity: 1; transform: translateY(0); }
 
-        .animate-on-scroll { opacity: 0; transform: translateY(30px); transition: all 0.7s cubic-bezier(0.4, 0, 0.2, 1); }
-        .animate-on-scroll.visible { opacity: 1; transform: translateY(0); }
-        .animate-on-scroll.from-left { transform: translateX(-30px); }
-        .animate-on-scroll.from-left.visible { transform: translateX(0); }
-        .animate-on-scroll.from-right { transform: translateX(30px); }
-        .animate-on-scroll.from-right.visible { transform: translateX(0); }
-        .animate-on-scroll.scale { transform: scale(0.95); }
-        .animate-on-scroll.scale.visible { transform: scale(1); }
+    /* Modal styling */
+    .modal-overlay { position: fixed; inset: 0; z-index: 70; background: rgba(17, 24, 21, .6); backdrop-filter: blur(8px); display: flex; align-items: center; justify-content: center; padding: 20px; opacity: 0; pointer-events: none; transition: opacity .25s ease; }
+    .modal-overlay.is-open { opacity: 1; pointer-events: auto; }
+    .modal-card { width: min(640px, 100%); max-height: 85vh; background: var(--surface); border: 1px solid var(--line-strong); box-shadow: var(--shadow); border-radius: 3px; display: flex; flex-direction: column; overflow: hidden; transform: scale(.96); transition: transform .25s ease; }
+    .modal-overlay.is-open .modal-card { transform: scale(1); }
+    .modal-header { padding: 20px; border-bottom: 1px solid var(--line); display: flex; justify-content: space-between; align-items: flex-start; background: var(--surface-raised); }
+    .modal-header h3 { margin: 4px 0 0; font-size: 18px; font-weight: 700; letter-spacing: -.02em; }
+    .modal-header small { color: var(--accent-strong); font: 9px 'DM Mono', monospace; letter-spacing: .08em; text-transform: uppercase; }
+    .modal-close { background: none; border: 0; font-size: 20px; cursor: pointer; color: var(--muted); padding: 4px; line-height: 1; }
+    .modal-close:hover { color: var(--ink); }
+    .modal-body { padding: 22px; overflow-y: auto; font-size: 12px; line-height: 1.8; color: var(--muted); }
+    .modal-body h4 { margin: 16px 0 6px; color: var(--ink); font-size: 11px; font-family: 'DM Mono', monospace; text-transform: uppercase; letter-spacing: .06em; }
+    .modal-body h4:first-child { margin-top: 0; }
+    .modal-body ul { margin: 0; padding-left: 18px; }
+    .modal-body li { margin-bottom: 6px; }
+    .modal-footer { padding: 14px 20px; border-top: 1px solid var(--line); display: flex; justify-content: flex-end; gap: 10px; background: var(--paper); }
 
-        .gradient-text {
-            background: linear-gradient(135deg, #6366f1, #8b5cf6, #a78bfa);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .dark .gradient-text {
-            background: linear-gradient(135deg, #818cf8, #a78bfa, #c4b5fd);
-            -webkit-background-clip: text; -webkit-text-fill-color: transparent;
-            background-clip: text;
-        }
-        .gradient-bg {
-            background: linear-gradient(-45deg, #6366f1, #8b5cf6, #4f46e5, #7c3aed);
-            background-size: 400% 400%;
-            animation: gradient 8s ease infinite;
-        }
-        .glass {
-            background: rgba(255,255,255,0.7); backdrop-filter: blur(16px); -webkit-backdrop-filter: blur(16px);
-            border: 1px solid rgba(255,255,255,0.3);
-        }
-        .dark .glass {
-            background: rgba(30,41,59,0.7); border: 1px solid rgba(51,65,85,0.5);
-        }
-        .timeline-line { position: absolute; left: 20px; top: 0; bottom: 0; width: 2px; background: linear-gradient(to bottom, #6366f1, #a78bfa); }
-        @media (min-width: 768px) { .timeline-line { left: 50%; transform: translateX(-50%); } }
-
-        .card-hover {
-            transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
-        }
-        .card-hover:hover {
-            transform: translateY(-8px);
-            box-shadow: 0 20px 40px -12px rgba(99, 102, 241, 0.25);
-        }
-        .dark .card-hover:hover {
-            box-shadow: 0 20px 40px -12px rgba(99, 102, 241, 0.35);
-        }
-
-        .skill-tag { transition: all 0.3s ease; }
-        .skill-tag:hover { transform: translateY(-2px) scale(1.05); }
-
-        .nav-link { position: relative; }
-        .nav-link::after {
-            content: ''; position: absolute; bottom: -2px; left: 50%; width: 0; height: 2px;
-            background: linear-gradient(90deg, #6366f1, #a78bfa);
-            transition: all 0.3s ease; transform: translateX(-50%);
-        }
-        .nav-link:hover::after, .nav-link.active::after { width: 100%; }
-
-        .blob {
-            position: absolute; border-radius: 50%; filter: blur(80px); opacity: 0.15;
-            pointer-events: none; z-index: 0;
-        }
-        .dark .blob { opacity: 0.1; }
-
-        ::-webkit-scrollbar { width: 8px; }
-        ::-webkit-scrollbar-track { background: #f1f5f9; }
-        ::-webkit-scrollbar-thumb { background: #6366f1; border-radius: 4px; }
-        ::-webkit-scrollbar-thumb:hover { background: #4f46e5; }
-        .dark ::-webkit-scrollbar-track { background: #1e293b; }
-
-        .hamburger-line {
-            transition: all 0.3s ease;
-        }
-        .menu-open .hamburger-line:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
-        .menu-open .hamburger-line:nth-child(2) { opacity: 0; }
-        .menu-open .hamburger-line:nth-child(3) { transform: rotate(-45deg) translate(7px, -6px); }
-
-        .typing-cursor::after {
-            content: '|'; animation: blink 1s step-end infinite;
-        }
-        @keyframes blink { 50% { opacity: 0; } }
-
-        .particle {
-            position: absolute; border-radius: 50%; pointer-events: none;
-            animation: float 6s ease-in-out infinite;
-        }
-    </style>
+    @media (max-width: 900px) {
+      .header-inner { grid-template-columns: 1fr auto; gap: 10px; padding: 10px 0; }
+      .nav { grid-column: 1 / -1; grid-row: 2; justify-content: flex-start; gap: 26px; border-top: 1px solid var(--line); overflow-x: auto; scrollbar-width: none; }
+      .nav::-webkit-scrollbar { display: none; }
+      .nav a { flex: 0 0 auto; }
+      .header-tools { grid-column: 2; grid-row: 1; }
+      .hero { grid-template-columns: minmax(0, 1.15fr) minmax(230px, .85fr); gap: 36px; padding-top: 66px; }
+      .hero-art { min-height: 355px; }
+      .project-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .toolkit-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+    @media (max-width: 660px) {
+      .page { width: min(100% - 38px, 520px); }
+      .header-inner { min-height: 65px; }
+      .brand-name { font-size: 12px; }
+      .nav { flex-wrap: wrap; gap: 0 15px; overflow: visible; }
+      .nav a { font-size: 10px; }
+      .hero { grid-template-columns: 1fr; gap: 30px; padding: 52px 0 42px; }
+      .hero-topline { margin-bottom: 19px; }
+      .hero-title { max-width: 550px; font-size: clamp(48px, 11vw, 66px); }
+      .hero-copy { font-size: 13px; }
+      .hero-art { width: 100%; min-height: 330px; }
+      .core-skills { margin-bottom: 10px; }
+      .core-skills-grid { grid-template-columns: 1fr; }
+      .core-skill, .core-skill:first-child, .core-skill:last-child { padding: 12px 0; border-right: 0; border-bottom: 1px solid var(--line); }
+      .core-skill:last-child { border-bottom: 0; }
+      .section { padding: 62px 0; }
+      .section-heading { display: block; margin-bottom: 25px; }
+      .section-note { max-width: 420px; margin-top: 12px; text-align: left; }
+      .about-grid, .background-grid, .contact-grid { grid-template-columns: 1fr; gap: 23px; }
+      .timeline { padding-left: 23px; }
+      .timeline-item { grid-template-columns: 1fr; gap: 8px; padding-bottom: 31px; }
+      .timeline-item::before { left: -29px; }
+      .timeline-date { display: flex; gap: 10px; align-items: baseline; }
+      .timeline-date strong { display: inline; }
+      .timeline-role { font-size: 16px; }
+      .project-grid { grid-template-columns: 1fr; gap: 13px; }
+      .toolkit-grid { grid-template-columns: 1fr; gap: 9px; }
+      .contact-section { padding: 66px 0 58px; }
+      .contact-title { font-size: clamp(46px, 12vw, 62px); }
+      .contact-form { padding: 17px; }
+    }
+    @media (prefers-reduced-motion: reduce) {
+      html { scroll-behavior: auto; }
+      *, *::before, *::after { scroll-behavior: auto !important; animation-duration: .01ms !important; transition-duration: .01ms !important; }
+      html.js .reveal { opacity: 1; transform: none; }
+    }
+  </style>
 </head>
-<body class="font-sans text-gray-800 dark:text-gray-200 bg-gray-50 dark:bg-dark-bg transition-colors duration-500">
+<body>
+  <a class="skip-link" href="#main" data-en="Skip to content" data-id="Langsung ke isi halaman">Langsung ke isi halaman</a>
+  <div class="progress-track" aria-hidden="true"><div class="progress-bar" id="progress-bar"></div></div>
 
-    <!-- ==================== NAVBAR ==================== -->
-    <nav id="navbar" class="fixed top-0 left-0 right-0 z-50 transition-all duration-500">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex items-center justify-between h-16 md:h-20">
-                <!-- Logo -->
-                <a href="#hero" class="relative z-10 flex items-center gap-2 group">
-                    <div class="w-10 h-10 rounded-xl gradient-bg flex items-center justify-center text-white font-display font-bold text-lg group-hover:scale-110 transition-transform duration-300">JF</div>
-                    <span class="font-display font-bold text-lg hidden sm:block dark:text-white">Jimmy<span class="gradient-text">Fernando</span></span>
-                </a>
-
-                <!-- Desktop Nav -->
-                <div class="hidden md:flex items-center gap-8">
-                    <a href="#about" class="nav-link text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Tentang</a>
-                    <a href="#experience" class="nav-link text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Pengalaman</a>
-                    <a href="#projects" class="nav-link text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Proyek</a>
-                    <a href="#skills" class="nav-link text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Keahlian</a>
-                    <a href="#education" class="nav-link text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Pendidikan</a>
-                    <a href="#contact" class="nav-link text-sm font-medium text-gray-600 dark:text-gray-400 hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Kontak</a>
-                    <!-- Dark Mode Toggle -->
-                    <button id="themeToggle" class="relative w-14 h-7 rounded-full bg-gray-200 dark:bg-dark-card border border-gray-300 dark:border-dark-border transition-colors duration-300 focus:outline-none focus:ring-2 focus:ring-primary-500 focus:ring-offset-2">
-                        <div id="themeToggleCircle" class="absolute top-0.5 left-0.5 w-6 h-6 rounded-full bg-white dark:bg-primary-500 shadow-md transition-all duration-300 flex items-center justify-center">
-                            <i class="fas fa-sun text-amber-500 dark:hidden text-xs"></i>
-                            <i class="fas fa-moon text-white hidden dark:block text-xs"></i>
-                        </div>
-                    </button>
-                </div>
-
-                <!-- Mobile Menu Button -->
-                <div class="flex items-center gap-3 md:hidden">
-                    <button id="themeToggleMobile" class="relative w-12 h-6 rounded-full bg-gray-200 dark:bg-dark-card border border-gray-300 dark:border-dark-border transition-colors duration-300">
-                        <div class="absolute top-0.5 left-0.5 w-5 h-5 rounded-full bg-white dark:bg-primary-500 shadow-md transition-all duration-300 flex items-center justify-center dark:translate-x-6">
-                            <i class="fas fa-sun text-amber-500 dark:hidden text-[10px]"></i>
-                            <i class="fas fa-moon text-white hidden dark:block text-[10px]"></i>
-                        </div>
-                    </button>
-                    <button id="menuBtn" class="relative z-10 w-10 h-10 flex flex-col items-center justify-center gap-1.5">
-                        <span class="hamburger-line w-6 h-0.5 bg-gray-800 dark:bg-white rounded-full"></span>
-                        <span class="hamburger-line w-6 h-0.5 bg-gray-800 dark:bg-white rounded-full"></span>
-                        <span class="hamburger-line w-6 h-0.5 bg-gray-800 dark:bg-white rounded-full"></span>
-                    </button>
-                </div>
-            </div>
+  <!-- ==================== HEADER ==================== -->
+  <header class="site-header">
+    <div class="page header-inner">
+      <a class="brand" href="#top" aria-label="Jimmy Fernando — back to top" data-en-aria="Jimmy Fernando — back to top" data-id-aria="Kembali ke atas — Jimmy Fernando">
+        <span><span class="brand-name">Jimmy Fernando</span><small class="brand-caption" data-en="Information Systems · Jakarta" data-id="Sistem Informasi · Jakarta">Sistem Informasi · Jakarta</small></span>
+      </a>
+      <nav class="nav" aria-label="Main navigation" data-en-aria="Main navigation" data-id-aria="Navigasi utama">
+        <a href="#about" data-en="About" data-id="Tentang">Tentang</a>
+        <a href="#work" data-en="Experience" data-id="Pengalaman">Pengalaman</a>
+        <a href="#projects" data-en="Selected work" data-id="Karya pilihan">Karya pilihan</a>
+        <a href="#skills" data-en="Toolkit" data-id="Keahlian">Keahlian</a>
+        <a href="#background" data-en="Background" data-id="Latar belakang">Latar belakang</a>
+        <a href="#contact" data-en="Contact" data-id="Kontak">Kontak</a>
+      </nav>
+      <div class="header-tools" aria-label="Page preferences" data-en-aria="Page preferences" data-id-aria="Pengaturan halaman">
+        <div class="lang-switch" role="group" aria-label="Language" data-en-aria="Language" data-id-aria="Bahasa">
+          <button class="control" type="button" data-lang="id" aria-pressed="true" aria-label="Bahasa Indonesia">ID</button>
+          <button class="control" type="button" data-lang="en" aria-pressed="false" aria-label="English">EN</button>
         </div>
-
-        <!-- Mobile Menu -->
-        <div id="mobileMenu" class="md:hidden fixed inset-0 bg-white/95 dark:bg-dark-bg/95 backdrop-blur-lg z-40 flex flex-col items-center justify-center gap-8 opacity-0 pointer-events-none transition-all duration-500">
-            <a href="#about" class="mobile-nav text-2xl font-display font-bold text-gray-800 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Tentang</a>
-            <a href="#experience" class="mobile-nav text-2xl font-display font-bold text-gray-800 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Pengalaman</a>
-            <a href="#projects" class="mobile-nav text-2xl font-display font-bold text-gray-800 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Proyek</a>
-            <a href="#skills" class="mobile-nav text-2xl font-display font-bold text-gray-800 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Keahlian</a>
-            <a href="#education" class="mobile-nav text-2xl font-display font-bold text-gray-800 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Pendidikan</a>
-            <a href="#contact" class="mobile-nav text-2xl font-display font-bold text-gray-800 dark:text-white hover:text-primary-600 dark:hover:text-primary-400 transition-colors">Kontak</a>
-        </div>
-    </nav>
-
-    <!-- ==================== HERO SECTION ==================== -->
-    <section id="hero" class="relative min-h-screen flex items-center overflow-hidden">
-        <!-- Animated Blobs -->
-        <div class="blob w-96 h-96 bg-primary-400 top-20 -left-20 animate-float"></div>
-        <div class="blob w-80 h-80 bg-purple-400 bottom-20 right-10 animate-float" style="animation-delay: -3s;"></div>
-        <div class="blob w-64 h-64 bg-indigo-300 top-1/2 left-1/3 animate-float" style="animation-delay: -1.5s;"></div>
-
-        <!-- Particles -->
-        <div class="absolute inset-0 overflow-hidden pointer-events-none" id="particles"></div>
-
-        <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 md:py-0">
-            <div class="grid md:grid-cols-2 gap-12 items-center">
-                <!-- Text Content -->
-                <div class="order-2 md:order-1 text-center md:text-left">
-                    <div class="inline-flex items-center gap-2 px-4 py-2 rounded-full bg-primary-50 dark:bg-primary-950/50 border border-primary-200 dark:border-primary-800 text-primary-700 dark:text-primary-300 text-sm font-medium mb-6 animate-fade-in">
-                        <span class="w-2 h-2 rounded-full bg-green-500 animate-pulse"></span>
-                        Open to Work
-                    </div>
-                    <h1 class="font-display text-4xl sm:text-5xl lg:text-6xl font-bold text-gray-900 dark:text-white leading-tight mb-4 animate-slide-up" style="animation-delay: 0.1s;">
-                        Halo, Saya<br>
-                        <span class="gradient-text">Jimmy Fernando</span>
-                    </h1>
-                    <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-3 animate-slide-up font-medium" style="animation-delay: 0.2s;">
-                        Saya seorang <span class="typing-text gradient-text font-bold"></span><span class="typing-cursor font-bold text-primary-500"></span>
-                    </p>
-                    <p class="text-base text-gray-500 dark:text-gray-500 mb-8 max-w-lg mx-auto md:mx-0 animate-slide-up leading-relaxed" style="animation-delay: 0.3s;">
-                        Membangun solusi digital yang berdampak — dari arsitektur backend yang solid hingga antarmuka pengguna yang intuitif. Siap membawa ide Anda menjadi kenyataan.
-                    </p>
-                    <div class="flex flex-wrap gap-4 justify-center md:justify-start animate-slide-up" style="animation-delay: 0.4s;">
-                        <a href="#contact" class="group inline-flex items-center gap-2 px-7 py-3.5 gradient-bg text-white font-semibold rounded-xl shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 transition-all duration-300 hover:scale-105">
-                            <i class="fas fa-paper-plane group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"></i>
-                            Hubungi Saya
-                        </a>
-                        <a href="CV_Jimmy_Fernando.pdf" download="CV_Jimmy_Fernando.pdf" class="group inline-flex items-center gap-2 px-7 py-3.5 bg-white dark:bg-dark-card border-2 border-gray-200 dark:border-dark-border text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:border-primary-400 dark:hover:border-primary-500 transition-all duration-300 hover:scale-105">
-                            <i class="fas fa-download group-hover:animate-bounce"></i>
-                            Unduh CV
-                        </a>
-                    </div>
-                    <!-- Social Links -->
-                    <div class="flex gap-4 mt-8 justify-center md:justify-start animate-slide-up" style="animation-delay: 0.5s;">
-                        <a href="https://linkedin.com/in/jimmyfernando" target="_blank" class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-dark-card border border-gray-200 dark:border-dark-border flex items-center justify-center text-gray-500 dark:text-gray-400 hover:bg-primary-500 hover:border-primary-500 hover:text-white transition-all duration-300 hover:scale-110 hover:-translate-y-1">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a href="https://github.com/jimmyfernando" target="_blank" class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-dark-card border border-gray-200 dark:border-dark-border flex items-center justify-center text-gray-500 dark:text-gray-400 hover:bg-gray-800 hover:border-gray-800 hover:text-white dark:hover:bg-white dark:hover:text-gray-900 transition-all duration-300 hover:scale-110 hover:-translate-y-1">
-                            <i class="fab fa-github"></i>
-                        </a>
-                        <a href="mailto:jimmyfrnn12@gmail.com" class="w-11 h-11 rounded-xl bg-gray-100 dark:bg-dark-card border border-gray-200 dark:border-dark-border flex items-center justify-center text-gray-500 dark:text-gray-400 hover:bg-red-500 hover:border-red-500 hover:text-white transition-all duration-300 hover:scale-110 hover:-translate-y-1">
-                            <i class="fas fa-envelope"></i>
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Avatar / Visual -->
-                <div class="order-1 md:order-2 flex justify-center animate-scale-in" style="animation-delay: 0.3s;">
-                    <div class="relative">
-                        <div class="w-64 h-64 sm:w-80 sm:h-80 rounded-full gradient-bg p-1.5 shadow-2xl shadow-primary-500/30 ring-4 ring-primary-400/20">
-                            <div class="w-full h-full rounded-full bg-gray-100 dark:bg-dark-card flex items-center justify-center overflow-hidden relative">
-                                <img src="profile.png" alt="Jimmy Fernando" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
-                                <div class="hidden text-center">
-                                    <div class="text-7xl sm:text-8xl font-display font-bold gradient-text">JF</div>
-                                    <p class="text-sm text-gray-400 mt-2 font-medium">Developer</p>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Floating Badges -->
-                        <div class="absolute -top-3 -right-3 px-4 py-2 glass rounded-xl shadow-lg animate-float text-sm font-semibold text-gray-700 dark:text-gray-300">
-                            <i class="fab fa-laravel text-red-500 mr-1.5"></i> Laravel
-                        </div>
-                        <div class="absolute -bottom-3 -left-3 px-4 py-2 glass rounded-xl shadow-lg animate-float text-sm font-semibold text-gray-700 dark:text-gray-300" style="animation-delay: -2s;">
-                            <i class="fab fa-figma text-purple-500 mr-1.5"></i> Figma
-                        </div>
-                        <div class="absolute top-1/2 -right-6 px-4 py-2 glass rounded-xl shadow-lg animate-float text-sm font-semibold text-gray-700 dark:text-gray-300" style="animation-delay: -4s;">
-                            <i class="fas fa-database text-blue-500 mr-1.5"></i> MySQL
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-
-        <!-- Scroll Indicator -->
-        <div class="absolute bottom-8 left-1/2 -translate-x-1/2 animate-bounce">
-            <a href="#about" class="flex flex-col items-center text-gray-400 dark:text-gray-600 hover:text-primary-500 transition-colors">
-                <span class="text-xs mb-2 font-medium">Scroll</span>
-                <i class="fas fa-chevron-down"></i>
-            </a>
-        </div>
-    </section>
-
-    <!-- ==================== ABOUT SECTION ==================== -->
-    <section id="about" class="py-20 md:py-28 relative overflow-hidden">
-        <div class="blob w-72 h-72 bg-purple-300 -top-20 -right-20"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <!-- Section Header -->
-            <div class="text-center mb-16 animate-on-scroll">
-                <span class="inline-block px-4 py-1.5 rounded-full bg-primary-50 dark:bg-primary-950/50 text-primary-600 dark:text-primary-400 text-sm font-semibold mb-4">Tentang Saya</span>
-                <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">Kenali Saya Lebih <span class="gradient-text">Dekat</span></h2>
-            </div>
-
-            <div class="grid md:grid-cols-5 gap-12 items-center">
-                <!-- Stats Cards -->
-                <div class="md:col-span-2 grid grid-cols-2 gap-4 animate-on-scroll from-left" id="statsContainer">
-                    <div class="glass rounded-2xl p-6 text-center card-hover">
-                        <div class="text-3xl font-display font-bold gradient-text mb-1" data-count="3">3+</div>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">Pengalaman Kerja</p>
-                    </div>
-                    <div class="glass rounded-2xl p-6 text-center card-hover">
-                        <div class="text-3xl font-display font-bold gradient-text mb-1" data-count="5">5+</div>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">Proyek Selesai</p>
-                    </div>
-                    <div class="glass rounded-2xl p-6 text-center card-hover">
-                        <div class="text-3xl font-display font-bold gradient-text mb-1" data-count="3.58">3.58</div>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">IPK Akademik</p>
-                    </div>
-                    <div class="glass rounded-2xl p-6 text-center card-hover">
-                        <div class="text-3xl font-display font-bold gradient-text mb-1" data-count="4">4+</div>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">Sertifikasi IT</p>
-                    </div>
-                </div>
-
-                <!-- About Text -->
-                <div class="md:col-span-3 animate-on-scroll from-right">
-                    <div class="glass rounded-2xl p-8 sm:p-10">
-                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6 text-base sm:text-lg">
-                            Saya adalah seorang <span class="text-gray-900 dark:text-white font-semibold">Sarjana Sistem Informasi</span> dari 
-                            <span class="text-gray-900 dark:text-white font-semibold">Universitas Darma Persada</span> dengan passion mendalam dalam dunia pengembangan web dan desain antarmuka pengguna.
-                        </p>
-                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed mb-6 text-base sm:text-lg">
-                            Dengan pengalaman langsung sebagai <span class="text-gray-900 dark:text-white font-semibold">Junior Web Developer</span> dan <span class="text-gray-900 dark:text-white font-semibold">Fullstack Developer</span>, saya terbiasa merancang serta membangun aplikasi web end-to-end — mulai dari mendesain UI/UX yang intuitif, mengimplementasikan frontend responsif, hingga mengembangkan arsitektur backend yang scalable menggunakan <span class="text-primary-600 dark:text-primary-400 font-semibold">Laravel</span> dan <span class="text-primary-600 dark:text-primary-400 font-semibold">MySQL</span>.
-                        </p>
-                        <p class="text-gray-600 dark:text-gray-400 leading-relaxed text-base sm:text-lg">
-                            Saya percaya bahwa teknologi terbaik adalah teknologi yang mempermudah kehidupan. Itulah mengapa saya selalu mengedepankan solusi yang <span class="text-gray-900 dark:text-white font-semibold">berdampak nyata</span>, efisien, dan berpusat pada kebutuhan pengguna.
-                        </p>
-                        <div class="flex flex-wrap gap-3 mt-8">
-                            <span class="px-3 py-1.5 rounded-lg bg-primary-50 dark:bg-primary-950/50 text-primary-600 dark:text-primary-400 text-sm font-medium border border-primary-200 dark:border-primary-800">🌍 Jakarta, Indonesia</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-green-50 dark:bg-green-950/50 text-green-600 dark:text-green-400 text-sm font-medium border border-green-200 dark:border-green-800">✅ Tersedia untuk bekerja</span>
-                            <span class="px-3 py-1.5 rounded-lg bg-purple-50 dark:bg-purple-950/50 text-purple-600 dark:text-purple-400 text-sm font-medium border border-purple-200 dark:border-purple-800">🎓 S1 Sistem Informasi</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== EXPERIENCE SECTION ==================== -->
-    <section id="experience" class="py-20 md:py-28 bg-gray-100/50 dark:bg-dark-card/30 relative overflow-hidden">
-        <div class="blob w-80 h-80 bg-indigo-300 -bottom-20 -left-20"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <!-- Section Header -->
-            <div class="text-center mb-16 animate-on-scroll">
-                <span class="inline-block px-4 py-1.5 rounded-full bg-primary-50 dark:bg-primary-950/50 text-primary-600 dark:text-primary-400 text-sm font-semibold mb-4">Pengalaman Kerja</span>
-                <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">Perjalanan <span class="gradient-text">Profesional</span></h2>
-            </div>
-
-            <!-- Timeline -->
-            <div class="relative max-w-4xl mx-auto">
-                <div class="timeline-line"></div>
-
-                <!-- Timeline Item 1 — Fullstack Developer -->
-                <div class="relative pl-14 md:pl-0 mb-12 animate-on-scroll">
-                    <div class="md:grid md:grid-cols-2 md:gap-12 items-center">
-                        <div class="md:text-right md:pr-12">
-                            <span class="inline-block px-3 py-1 rounded-full gradient-bg text-white text-xs font-bold mb-3">Terbaru</span>
-                            <h3 class="text-xl font-display font-bold text-gray-900 dark:text-white mb-1">Fullstack Developer</h3>
-                            <p class="text-primary-600 dark:text-primary-400 font-semibold mb-1">PT. Metinca Prima Industrial Works</p>
-                            <p class="text-sm text-gray-500 dark:text-gray-500 mb-4"><i class="far fa-calendar-alt mr-1"></i> Des 2025 — Jul 2026 · Final Project</p>
-                        </div>
-                        <!-- Timeline Dot -->
-                        <div class="absolute left-[14px] md:left-1/2 md:-translate-x-1/2 top-2 md:top-1/2 md:-translate-y-1/2 w-4 h-4 rounded-full gradient-bg border-4 border-white dark:border-dark-bg shadow-lg z-10"></div>
-                        <div class="glass rounded-2xl p-6 mt-4 md:mt-0">
-                            <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400">
-                                <li class="flex gap-3"><i class="fas fa-check-circle text-primary-500 mt-0.5 shrink-0"></i>Merancang & mengimplementasikan sistem Quality Control berbasis web secara end-to-end untuk penanganan klaim produk</li>
-                                <li class="flex gap-3"><i class="fas fa-check-circle text-primary-500 mt-0.5 shrink-0"></i>Membangun alur validasi komplain terpusat dengan fitur unggah bukti digital & kategorisasi cacat produk</li>
-                                <li class="flex gap-3"><i class="fas fa-check-circle text-primary-500 mt-0.5 shrink-0"></i>Mengembangkan dashboard manajemen tiket QC dengan Laravel untuk monitoring SLA</li>
-                                <li class="flex gap-3"><i class="fas fa-check-circle text-primary-500 mt-0.5 shrink-0"></i>Mendesain skema database relasional MySQL untuk histori keluhan & audit kerusakan</li>
-                                <li class="flex gap-3"><i class="fas fa-check-circle text-primary-500 mt-0.5 shrink-0"></i>Merombak total UI/UX portal pelanggan menjadi responsif & intuitif</li>
-                            </ul>
-                            <div class="flex flex-wrap gap-2 mt-4">
-                                <span class="px-2.5 py-1 rounded-md bg-red-50 dark:bg-red-950/50 text-red-600 dark:text-red-400 text-xs font-medium">Laravel</span>
-                                <span class="px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-950/50 text-blue-600 dark:text-blue-400 text-xs font-medium">MySQL</span>
-                                <span class="px-2.5 py-1 rounded-md bg-purple-50 dark:bg-purple-950/50 text-purple-600 dark:text-purple-400 text-xs font-medium">UI/UX</span>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Timeline Item 2 — Junior Web Developer -->
-                <div class="relative pl-14 md:pl-0 mb-12 animate-on-scroll">
-                    <div class="md:grid md:grid-cols-2 md:gap-12 items-center">
-                        <div class="md:text-right md:pr-12 md:order-1 order-1">
-                            <div class="glass rounded-2xl p-6">
-                                <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400">
-                                    <li class="flex gap-3"><i class="fas fa-check-circle text-primary-500 mt-0.5 shrink-0"></i>Merancang ulang UI/UX website perusahaan menjadi tampilan yang modern & segar</li>
-                                    <li class="flex gap-3"><i class="fas fa-check-circle text-primary-500 mt-0.5 shrink-0"></i>Mengimplementasikan desain antarmuka pada platform WordPress</li>
-                                    <li class="flex gap-3"><i class="fas fa-check-circle text-primary-500 mt-0.5 shrink-0"></i>Mendokumentasikan seluruh proses development & melaporkan progress secara berkala</li>
-                                    <li class="flex gap-3"><i class="fas fa-check-circle text-primary-500 mt-0.5 shrink-0"></i>Mempresentasikan hasil desain UI/UX kepada stakeholder terkait</li>
-                                </ul>
-                                <div class="flex flex-wrap gap-2 mt-4">
-                                    <span class="px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-950/50 text-blue-600 dark:text-blue-400 text-xs font-medium">WordPress</span>
-                                    <span class="px-2.5 py-1 rounded-md bg-orange-50 dark:bg-orange-950/50 text-orange-600 dark:text-orange-400 text-xs font-medium">HTML/CSS</span>
-                                    <span class="px-2.5 py-1 rounded-md bg-purple-50 dark:bg-purple-950/50 text-purple-600 dark:text-purple-400 text-xs font-medium">UI/UX Design</span>
-                                </div>
-                            </div>
-                        </div>
-                        <!-- Timeline Dot -->
-                        <div class="absolute left-[14px] md:left-1/2 md:-translate-x-1/2 top-2 md:top-1/2 md:-translate-y-1/2 w-4 h-4 rounded-full bg-primary-400 border-4 border-white dark:border-dark-bg shadow-lg z-10"></div>
-                        <div class="md:order-2 order-2 mt-4 md:mt-0 md:pl-12">
-                            <h3 class="text-xl font-display font-bold text-gray-900 dark:text-white mb-1">Junior Web Developer</h3>
-                            <p class="text-primary-600 dark:text-primary-400 font-semibold mb-1">PT. Rezeki Utami Sejahtera</p>
-                            <p class="text-sm text-gray-500 dark:text-gray-500"><i class="far fa-calendar-alt mr-1"></i> Mar 2025 — Jun 2025 · Internship</p>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Timeline Item 3 — Store Keeper -->
-                <div class="relative pl-14 md:pl-0 animate-on-scroll">
-                    <div class="md:grid md:grid-cols-2 md:gap-12 items-center">
-                        <div class="md:text-right md:pr-12">
-                            <h3 class="text-xl font-display font-bold text-gray-900 dark:text-white mb-1">Staff Operasional Toko</h3>
-                            <p class="text-primary-600 dark:text-primary-400 font-semibold mb-1">Toko Alat Mesin Star Jaya</p>
-                            <p class="text-sm text-gray-500 dark:text-gray-500"><i class="far fa-calendar-alt mr-1"></i> 2019 — 2020 · Harian Lepas</p>
-                        </div>
-                        <!-- Timeline Dot -->
-                        <div class="absolute left-[14px] md:left-1/2 md:-translate-x-1/2 top-2 md:top-1/2 md:-translate-y-1/2 w-4 h-4 rounded-full bg-primary-300 border-4 border-white dark:border-dark-bg shadow-lg z-10"></div>
-                        <div class="glass rounded-2xl p-6 mt-4 md:mt-0">
-                            <ul class="space-y-3 text-sm text-gray-600 dark:text-gray-400">
-                                <li class="flex gap-3"><i class="fas fa-check-circle text-primary-500 mt-0.5 shrink-0"></i>Mengelola operasional harian toko termasuk proses buka-tutup toko</li>
-                                <li class="flex gap-3"><i class="fas fa-check-circle text-primary-500 mt-0.5 shrink-0"></i>Memberikan pelayanan pelanggan berkualitas & membantu pemilihan produk</li>
-                                <li class="flex gap-3"><i class="fas fa-check-circle text-primary-500 mt-0.5 shrink-0"></i>Menangani transaksi kasir & memproses pembayaran secara akurat</li>
-                            </ul>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== PROJECTS SECTION ==================== -->
-    <section id="projects" class="py-20 md:py-28 relative overflow-hidden">
-        <div class="blob w-72 h-72 bg-violet-300 top-20 right-0"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <!-- Section Header -->
-            <div class="text-center mb-16 animate-on-scroll">
-                <span class="inline-block px-4 py-1.5 rounded-full bg-primary-50 dark:bg-primary-950/50 text-primary-600 dark:text-primary-400 text-sm font-semibold mb-4">Portofolio</span>
-                <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">Proyek <span class="gradient-text">Terbaik</span></h2>
-                <p class="text-gray-500 dark:text-gray-500 mt-3 max-w-2xl mx-auto">Koleksi proyek yang menampilkan kemampuan saya dalam pengembangan web, desain UI/UX, dan kreativitas digital.</p>
-            </div>
-
-            <!-- Project Cards Grid -->
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-
-                <!-- Project 1: QC System -->
-                <div class="animate-on-scroll scale group">
-                    <div class="glass rounded-2xl overflow-hidden card-hover h-full flex flex-col">
-                        <div class="relative h-48 gradient-bg flex items-center justify-center overflow-hidden">
-                            <div class="text-center text-white">
-                                <i class="fas fa-clipboard-check text-5xl mb-3 opacity-80 group-hover:scale-110 transition-transform duration-500"></i>
-                                <p class="text-sm font-medium opacity-70">Web Application</p>
-                            </div>
-                            <div class="absolute inset-0 bg-black/0 group-hover:bg-black/20 transition-colors duration-500"></div>
-                        </div>
-                        <div class="p-6 flex-1 flex flex-col">
-                            <h3 class="text-lg font-display font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">Sistem Quality Control</h3>
-                            <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 flex-1 leading-relaxed">Sistem penanganan klaim produk end-to-end dengan portal tiket pelanggan, dashboard manajemen QC, dan monitoring SLA secara real-time.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="skill-tag px-2.5 py-1 rounded-md bg-red-50 dark:bg-red-950/40 text-red-600 dark:text-red-400 text-xs font-medium">Laravel</span>
-                                <span class="skill-tag px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 text-xs font-medium">MySQL</span>
-                                <span class="skill-tag px-2.5 py-1 rounded-md bg-yellow-50 dark:bg-yellow-950/40 text-yellow-600 dark:text-yellow-400 text-xs font-medium">JavaScript</span>
-                            </div>
-                            <div class="flex gap-3">
-                                <button onclick="openModal(1)" class="flex-1 text-center px-4 py-2 rounded-lg bg-primary-50 dark:bg-primary-950/50 text-primary-600 dark:text-primary-400 text-sm font-medium hover:bg-primary-100 dark:hover:bg-primary-900/50 transition-colors"><i class="fas fa-info-circle mr-1.5"></i>Detail Proyek</button>
-                                <a href="https://github.com/jimmyfernando" target="_blank" class="flex-1 text-center px-4 py-2 rounded-lg bg-gray-100 dark:bg-dark-card text-gray-600 dark:text-gray-400 text-sm font-medium hover:bg-gray-200 dark:hover:bg-dark-border transition-colors"><i class="fab fa-github mr-1.5"></i>GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 2: UI/UX Mobile Design -->
-                <div class="animate-on-scroll scale" style="transition-delay: 0.1s;">
-                    <div class="glass rounded-2xl overflow-hidden card-hover h-full flex flex-col group">
-                        <div class="relative h-48 bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center overflow-hidden">
-                            <div class="text-center text-white">
-                                <i class="fas fa-mobile-alt text-5xl mb-3 opacity-80 group-hover:scale-110 transition-transform duration-500"></i>
-                                <p class="text-sm font-medium opacity-70">Mobile Design</p>
-                            </div>
-                        </div>
-                        <div class="p-6 flex-1 flex flex-col">
-                            <h3 class="text-lg font-display font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">UI/UX Mobile Design</h3>
-                            <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 flex-1 leading-relaxed">Perancangan wireframe high-fidelity, prototipe interaktif, dan desain antarmuka komprehensif untuk aplikasi mobile menggunakan Figma.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="skill-tag px-2.5 py-1 rounded-md bg-purple-50 dark:bg-purple-950/40 text-purple-600 dark:text-purple-400 text-xs font-medium">Figma</span>
-                                <span class="skill-tag px-2.5 py-1 rounded-md bg-pink-50 dark:bg-pink-950/40 text-pink-600 dark:text-pink-400 text-xs font-medium">Prototyping</span>
-                                <span class="skill-tag px-2.5 py-1 rounded-md bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 text-xs font-medium">UI/UX</span>
-                            </div>
-                            <div class="flex gap-3">
-                                <button onclick="openModal(2)" class="flex-1 text-center px-4 py-2 rounded-lg bg-primary-50 dark:bg-primary-950/50 text-primary-600 dark:text-primary-400 text-sm font-medium hover:bg-primary-100 dark:hover:bg-primary-900/50 transition-colors"><i class="fas fa-info-circle mr-1.5"></i>Detail Proyek</button>
-                                <a href="https://www.figma.com" target="_blank" class="flex-1 text-center px-4 py-2 rounded-lg bg-gray-100 dark:bg-dark-card text-gray-600 dark:text-gray-400 text-sm font-medium hover:bg-gray-200 dark:hover:bg-dark-border transition-colors"><i class="fab fa-figma mr-1.5"></i>Figma</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 3: Company Website Redesign -->
-                <div class="animate-on-scroll scale" style="transition-delay: 0.2s;">
-                    <div class="glass rounded-2xl overflow-hidden card-hover h-full flex flex-col group">
-                        <div class="relative h-48 bg-gradient-to-br from-cyan-500 to-blue-600 flex items-center justify-center overflow-hidden">
-                            <div class="text-center text-white">
-                                <i class="fas fa-globe text-5xl mb-3 opacity-80 group-hover:scale-110 transition-transform duration-500"></i>
-                                <p class="text-sm font-medium opacity-70">Web Design</p>
-                            </div>
-                        </div>
-                        <div class="p-6 flex-1 flex flex-col">
-                            <h3 class="text-lg font-display font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">Website Redesign</h3>
-                            <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 flex-1 leading-relaxed">Proyek redesign UI/UX website perusahaan PT. Rezeki Utami Sejahtera menggunakan WordPress untuk meningkatkan user experience.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="skill-tag px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 text-xs font-medium">WordPress</span>
-                                <span class="skill-tag px-2.5 py-1 rounded-md bg-orange-50 dark:bg-orange-950/40 text-orange-600 dark:text-orange-400 text-xs font-medium">HTML/CSS</span>
-                                <span class="skill-tag px-2.5 py-1 rounded-md bg-green-50 dark:bg-green-950/40 text-green-600 dark:text-green-400 text-xs font-medium">CMS</span>
-                            </div>
-                            <div class="flex gap-3">
-                                <button onclick="openModal(3)" class="flex-1 text-center px-4 py-2 rounded-lg bg-primary-50 dark:bg-primary-950/50 text-primary-600 dark:text-primary-400 text-sm font-medium hover:bg-primary-100 dark:hover:bg-primary-900/50 transition-colors"><i class="fas fa-info-circle mr-1.5"></i>Detail Proyek</button>
-                                <a href="https://github.com/jimmyfernando" target="_blank" class="flex-1 text-center px-4 py-2 rounded-lg bg-gray-100 dark:bg-dark-card text-gray-600 dark:text-gray-400 text-sm font-medium hover:bg-gray-200 dark:hover:bg-dark-border transition-colors"><i class="fab fa-github mr-1.5"></i>GitHub</a>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 4: Short Video Editing -->
-                <div class="animate-on-scroll scale" style="transition-delay: 0.1s;">
-                    <div class="glass rounded-2xl overflow-hidden card-hover h-full flex flex-col group">
-                        <div class="relative h-48 bg-gradient-to-br from-rose-500 to-orange-500 flex items-center justify-center overflow-hidden">
-                            <div class="text-center text-white">
-                                <i class="fas fa-film text-5xl mb-3 opacity-80 group-hover:scale-110 transition-transform duration-500"></i>
-                                <p class="text-sm font-medium opacity-70">Video Editing</p>
-                            </div>
-                        </div>
-                        <div class="p-6 flex-1 flex flex-col">
-                            <h3 class="text-lg font-display font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">Short Video Editing</h3>
-                            <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 flex-1 leading-relaxed">Produksi konten video pendek profesional — meliputi editing, audio mixing, transisi sinematik, dan penambahan subtitle serta motion graphics.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="skill-tag px-2.5 py-1 rounded-md bg-rose-50 dark:bg-rose-950/40 text-rose-600 dark:text-rose-400 text-xs font-medium">CapCut</span>
-                                <span class="skill-tag px-2.5 py-1 rounded-md bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 text-xs font-medium">Audio Editing</span>
-                                <span class="skill-tag px-2.5 py-1 rounded-md bg-teal-50 dark:bg-teal-950/40 text-teal-600 dark:text-teal-400 text-xs font-medium">Motion</span>
-                            </div>
-                            <div class="flex gap-3">
-                                <button onclick="openModal(4)" class="w-full text-center px-4 py-2 rounded-lg bg-primary-50 dark:bg-primary-950/50 text-primary-600 dark:text-primary-400 text-sm font-medium hover:bg-primary-100 dark:hover:bg-primary-900/50 transition-colors"><i class="fas fa-info-circle mr-1.5"></i>Detail Portofolio</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 5: Livestreaming -->
-                <div class="animate-on-scroll scale" style="transition-delay: 0.2s;">
-                    <div class="glass rounded-2xl overflow-hidden card-hover h-full flex flex-col group">
-                        <div class="relative h-48 bg-gradient-to-br from-emerald-500 to-teal-600 flex items-center justify-center overflow-hidden">
-                            <div class="text-center text-white">
-                                <i class="fas fa-broadcast-tower text-5xl mb-3 opacity-80 group-hover:scale-110 transition-transform duration-500"></i>
-                                <p class="text-sm font-medium opacity-70">Content Creation</p>
-                            </div>
-                        </div>
-                        <div class="p-6 flex-1 flex flex-col">
-                            <h3 class="text-lg font-display font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">Game Livestreaming</h3>
-                            <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 flex-1 leading-relaxed">Konten kreator aktif di platform TikTok Live — membangun engagement audiens real-time melalui sesi livestreaming game interaktif.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="skill-tag px-2.5 py-1 rounded-md bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 text-xs font-medium">TikTok Live</span>
-                                <span class="skill-tag px-2.5 py-1 rounded-md bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 text-xs font-medium">Roblox</span>
-                            </div>
-                            <div class="flex gap-3">
-                                <button onclick="openModal(5)" class="w-full text-center px-4 py-2 rounded-lg bg-primary-50 dark:bg-primary-950/50 text-primary-600 dark:text-primary-400 text-sm font-medium hover:bg-primary-100 dark:hover:bg-primary-900/50 transition-colors"><i class="fas fa-info-circle mr-1.5"></i>Detail Kanal & Live</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Project 6: Digital Commerce -->
-                <div class="animate-on-scroll scale" style="transition-delay: 0.3s;">
-                    <div class="glass rounded-2xl overflow-hidden card-hover h-full flex flex-col group">
-                        <div class="relative h-48 bg-gradient-to-br from-amber-500 to-yellow-500 flex items-center justify-center overflow-hidden">
-                            <div class="text-center text-white">
-                                <i class="fas fa-store text-5xl mb-3 opacity-80 group-hover:scale-110 transition-transform duration-500"></i>
-                                <p class="text-sm font-medium opacity-70">E-Commerce</p>
-                            </div>
-                        </div>
-                        <div class="p-6 flex-1 flex flex-col">
-                            <h3 class="text-lg font-display font-bold text-gray-900 dark:text-white mb-2 group-hover:text-primary-600 dark:group-hover:text-primary-400 transition-colors">Digital Commerce</h3>
-                            <p class="text-sm text-gray-500 dark:text-gray-400 mb-4 flex-1 leading-relaxed">Pengalaman jual-beli item digital di ekosistem Roblox melalui platform marketplace — mengelola komunikasi langsung dengan konsumen.</p>
-                            <div class="flex flex-wrap gap-2 mb-4">
-                                <span class="skill-tag px-2.5 py-1 rounded-md bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 text-xs font-medium">Facebook</span>
-                                <span class="skill-tag px-2.5 py-1 rounded-md bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 text-xs font-medium">Itemku</span>
-                            </div>
-                            <div class="flex gap-3">
-                                <button onclick="openModal(6)" class="w-full text-center px-4 py-2 rounded-lg bg-primary-50 dark:bg-primary-950/50 text-primary-600 dark:text-primary-400 text-sm font-medium hover:bg-primary-100 dark:hover:bg-primary-900/50 transition-colors"><i class="fas fa-info-circle mr-1.5"></i>Detail Proyek</button>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== SKILLS SECTION ==================== -->
-    <section id="skills" class="py-20 md:py-28 bg-gray-100/50 dark:bg-dark-card/30 relative overflow-hidden">
-        <div class="blob w-80 h-80 bg-blue-300 -top-20 left-1/4"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <!-- Section Header -->
-            <div class="text-center mb-16 animate-on-scroll">
-                <span class="inline-block px-4 py-1.5 rounded-full bg-primary-50 dark:bg-primary-950/50 text-primary-600 dark:text-primary-400 text-sm font-semibold mb-4">Keahlian</span>
-                <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">Tech Stack & <span class="gradient-text">Keahlian</span></h2>
-            </div>
-
-            <div class="grid sm:grid-cols-2 lg:grid-cols-3 gap-6 md:gap-8">
-
-                <!-- Web Development -->
-                <div class="animate-on-scroll scale">
-                    <div class="glass rounded-2xl p-8 card-hover h-full">
-                        <div class="w-14 h-14 rounded-2xl gradient-bg flex items-center justify-center text-white text-xl mb-6 shadow-lg shadow-primary-500/25">
-                            <i class="fas fa-code"></i>
-                        </div>
-                        <h3 class="text-lg font-display font-bold text-gray-900 dark:text-white mb-4">Web Development</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="skill-tag px-3 py-1.5 rounded-lg bg-orange-50 dark:bg-orange-950/40 text-orange-600 dark:text-orange-400 text-sm font-medium border border-orange-200 dark:border-orange-800/50">HTML5</span>
-                            <span class="skill-tag px-3 py-1.5 rounded-lg bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 text-sm font-medium border border-blue-200 dark:border-blue-800/50">CSS3</span>
-                            <span class="skill-tag px-3 py-1.5 rounded-lg bg-yellow-50 dark:bg-yellow-950/40 text-yellow-600 dark:text-yellow-400 text-sm font-medium border border-yellow-200 dark:border-yellow-800/50">JavaScript</span>
-                            <span class="skill-tag px-3 py-1.5 rounded-lg bg-red-50 dark:bg-red-950/40 text-red-600 dark:text-red-400 text-sm font-medium border border-red-200 dark:border-red-800/50">Laravel</span>
-                            <span class="skill-tag px-3 py-1.5 rounded-lg bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 text-sm font-medium border border-indigo-200 dark:border-indigo-800/50">PHP</span>
-                            <span class="skill-tag px-3 py-1.5 rounded-lg bg-cyan-50 dark:bg-cyan-950/40 text-cyan-600 dark:text-cyan-400 text-sm font-medium border border-cyan-200 dark:border-cyan-800/50">WordPress</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Database & Backend -->
-                <div class="animate-on-scroll scale" style="transition-delay: 0.1s;">
-                    <div class="glass rounded-2xl p-8 card-hover h-full">
-                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-blue-500 to-cyan-500 flex items-center justify-center text-white text-xl mb-6 shadow-lg shadow-blue-500/25">
-                            <i class="fas fa-database"></i>
-                        </div>
-                        <h3 class="text-lg font-display font-bold text-gray-900 dark:text-white mb-4">Database & Tools</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="skill-tag px-3 py-1.5 rounded-lg bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 text-sm font-medium border border-blue-200 dark:border-blue-800/50">MySQL</span>
-                            <span class="skill-tag px-3 py-1.5 rounded-lg bg-purple-50 dark:bg-purple-950/40 text-purple-600 dark:text-purple-400 text-sm font-medium border border-purple-200 dark:border-purple-800/50">Visual Basic</span>
-                            <span class="skill-tag px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 text-sm font-medium border border-gray-200 dark:border-gray-700">Git</span>
-                            <span class="skill-tag px-3 py-1.5 rounded-lg bg-green-50 dark:bg-green-950/40 text-green-600 dark:text-green-400 text-sm font-medium border border-green-200 dark:border-green-800/50">Dataiku</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Design & Creative -->
-                <div class="animate-on-scroll scale" style="transition-delay: 0.2s;">
-                    <div class="glass rounded-2xl p-8 card-hover h-full">
-                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-purple-500 to-pink-500 flex items-center justify-center text-white text-xl mb-6 shadow-lg shadow-purple-500/25">
-                            <i class="fas fa-palette"></i>
-                        </div>
-                        <h3 class="text-lg font-display font-bold text-gray-900 dark:text-white mb-4">Design & Creative</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="skill-tag px-3 py-1.5 rounded-lg bg-purple-50 dark:bg-purple-950/40 text-purple-600 dark:text-purple-400 text-sm font-medium border border-purple-200 dark:border-purple-800/50">Figma</span>
-                            <span class="skill-tag px-3 py-1.5 rounded-lg bg-cyan-50 dark:bg-cyan-950/40 text-cyan-600 dark:text-cyan-400 text-sm font-medium border border-cyan-200 dark:border-cyan-800/50">Canva</span>
-                            <span class="skill-tag px-3 py-1.5 rounded-lg bg-rose-50 dark:bg-rose-950/40 text-rose-600 dark:text-rose-400 text-sm font-medium border border-rose-200 dark:border-rose-800/50">CapCut</span>
-                            <span class="skill-tag px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 text-sm font-medium border border-gray-200 dark:border-gray-700">TikTok Studio</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Productivity -->
-                <div class="animate-on-scroll scale" style="transition-delay: 0.1s;">
-                    <div class="glass rounded-2xl p-8 card-hover h-full">
-                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center text-white text-xl mb-6 shadow-lg shadow-green-500/25">
-                            <i class="fas fa-laptop-code"></i>
-                        </div>
-                        <h3 class="text-lg font-display font-bold text-gray-900 dark:text-white mb-4">Productivity Suite</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="skill-tag px-3 py-1.5 rounded-lg bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 text-sm font-medium border border-blue-200 dark:border-blue-800/50">Microsoft Office</span>
-                            <span class="skill-tag px-3 py-1.5 rounded-lg bg-red-50 dark:bg-red-950/40 text-red-600 dark:text-red-400 text-sm font-medium border border-red-200 dark:border-red-800/50">Google Workspace</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Networking -->
-                <div class="animate-on-scroll scale" style="transition-delay: 0.2s;">
-                    <div class="glass rounded-2xl p-8 card-hover h-full">
-                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center text-white text-xl mb-6 shadow-lg shadow-amber-500/25">
-                            <i class="fas fa-network-wired"></i>
-                        </div>
-                        <h3 class="text-lg font-display font-bold text-gray-900 dark:text-white mb-4">Networking</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="skill-tag px-3 py-1.5 rounded-lg bg-blue-50 dark:bg-blue-950/40 text-blue-600 dark:text-blue-400 text-sm font-medium border border-blue-200 dark:border-blue-800/50">Cisco Netacad</span>
-                            <span class="skill-tag px-3 py-1.5 rounded-lg bg-gray-100 dark:bg-gray-800 text-gray-600 dark:text-gray-400 text-sm font-medium border border-gray-200 dark:border-gray-700">IT Essentials</span>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Soft Skills -->
-                <div class="animate-on-scroll scale" style="transition-delay: 0.3s;">
-                    <div class="glass rounded-2xl p-8 card-hover h-full">
-                        <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-rose-500 to-pink-500 flex items-center justify-center text-white text-xl mb-6 shadow-lg shadow-rose-500/25">
-                            <i class="fas fa-users"></i>
-                        </div>
-                        <h3 class="text-lg font-display font-bold text-gray-900 dark:text-white mb-4">Soft Skills</h3>
-                        <div class="flex flex-wrap gap-2">
-                            <span class="skill-tag px-3 py-1.5 rounded-lg bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 text-sm font-medium border border-indigo-200 dark:border-indigo-800/50">Mandiri</span>
-                            <span class="skill-tag px-3 py-1.5 rounded-lg bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 text-sm font-medium border border-emerald-200 dark:border-emerald-800/50">Inovatif</span>
-                            <span class="skill-tag px-3 py-1.5 rounded-lg bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 text-sm font-medium border border-amber-200 dark:border-amber-800/50">Komunikatif</span>
-                            <span class="skill-tag px-3 py-1.5 rounded-lg bg-cyan-50 dark:bg-cyan-950/40 text-cyan-600 dark:text-cyan-400 text-sm font-medium border border-cyan-200 dark:border-cyan-800/50">Detail-Oriented</span>
-                            <span class="skill-tag px-3 py-1.5 rounded-lg bg-rose-50 dark:bg-rose-950/40 text-rose-600 dark:text-rose-400 text-sm font-medium border border-rose-200 dark:border-rose-800/50">Fast Learner</span>
-                            <span class="skill-tag px-3 py-1.5 rounded-lg bg-violet-50 dark:bg-violet-950/40 text-violet-600 dark:text-violet-400 text-sm font-medium border border-violet-200 dark:border-violet-800/50">Transparan</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== EDUCATION SECTION ==================== -->
-    <section id="education" class="py-20 md:py-28 relative overflow-hidden">
-        <div class="blob w-72 h-72 bg-emerald-300 bottom-0 right-0"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <!-- Section Header -->
-            <div class="text-center mb-16 animate-on-scroll">
-                <span class="inline-block px-4 py-1.5 rounded-full bg-primary-50 dark:bg-primary-950/50 text-primary-600 dark:text-primary-400 text-sm font-semibold mb-4">Edukasi</span>
-                <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">Pendidikan & <span class="gradient-text">Sertifikasi</span></h2>
-            </div>
-
-            <div class="grid md:grid-cols-2 gap-8 max-w-5xl mx-auto">
-
-                <!-- Education -->
-                <div class="animate-on-scroll from-left">
-                    <div class="glass rounded-2xl p-8 card-hover h-full">
-                        <div class="flex items-start gap-4 mb-6">
-                            <div class="w-14 h-14 rounded-2xl gradient-bg flex items-center justify-center text-white text-xl shrink-0 shadow-lg shadow-primary-500/25">
-                                <i class="fas fa-graduation-cap"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-display font-bold text-gray-900 dark:text-white">Pendidikan Formal</h3>
-                                <p class="text-sm text-gray-500 dark:text-gray-500">Riwayat akademik</p>
-                            </div>
-                        </div>
-
-                        <!-- University -->
-                        <div class="mb-6 p-5 rounded-xl bg-gray-50 dark:bg-dark-bg/50 border border-gray-200 dark:border-dark-border">
-                            <div class="flex items-center justify-between mb-2">
-                                <h4 class="font-bold text-gray-900 dark:text-white">Universitas Darma Persada</h4>
-                                <span class="px-2.5 py-1 rounded-full gradient-bg text-white text-xs font-bold">3.58</span>
-                            </div>
-                            <p class="text-primary-600 dark:text-primary-400 font-medium text-sm mb-1">S1 — Sistem Informasi</p>
-                            <p class="text-xs text-gray-500 dark:text-gray-500"><i class="far fa-calendar-alt mr-1"></i> 2022 — 2026 · Jakarta, Indonesia</p>
-                        </div>
-
-                        <!-- Organizational -->
-                        <h4 class="text-sm font-bold text-gray-700 dark:text-gray-300 mb-3 uppercase tracking-wider">Organisasi</h4>
-                        <div class="space-y-3">
-                            <div class="flex gap-3 items-start">
-                                <div class="w-2 h-2 rounded-full bg-primary-500 mt-2 shrink-0"></div>
-                                <div>
-                                    <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">HMSI — Universitas Darma Persada</p>
-                                    <p class="text-xs text-gray-500 dark:text-gray-500">2023 — 2024 · Pengorganisasian kegiatan akademik SI</p>
-                                </div>
-                            </div>
-                            <div class="flex gap-3 items-start">
-                                <div class="w-2 h-2 rounded-full bg-primary-400 mt-2 shrink-0"></div>
-                                <div>
-                                    <p class="text-sm font-semibold text-gray-800 dark:text-gray-200">Marawis Club — SMAN 83 Jakarta</p>
-                                    <p class="text-xs text-gray-500 dark:text-gray-500">2019 — 2022 · Perform di acara resmi sekolah & pemerintah</p>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-
-                <!-- Certifications -->
-                <div class="animate-on-scroll from-right">
-                    <div class="glass rounded-2xl p-8 card-hover h-full">
-                        <div class="flex items-start gap-4 mb-6">
-                            <div class="w-14 h-14 rounded-2xl bg-gradient-to-br from-amber-500 to-orange-500 flex items-center justify-center text-white text-xl shrink-0 shadow-lg shadow-amber-500/25">
-                                <i class="fas fa-certificate"></i>
-                            </div>
-                            <div>
-                                <h3 class="text-xl font-display font-bold text-gray-900 dark:text-white">Sertifikasi</h3>
-                                <p class="text-sm text-gray-500 dark:text-gray-500">Kompetensi terverifikasi</p>
-                            </div>
-                        </div>
-
-                        <div class="space-y-4">
-                            <div class="p-4 rounded-xl bg-gray-50 dark:bg-dark-bg/50 border border-gray-200 dark:border-dark-border hover:border-primary-300 dark:hover:border-primary-700 transition-colors">
-                                <div class="flex items-center gap-3 mb-1">
-                                    <i class="fas fa-award text-amber-500"></i>
-                                    <h4 class="font-bold text-sm text-gray-900 dark:text-white">Core Designer</h4>
-                                </div>
-                                <p class="text-xs text-gray-500 dark:text-gray-500 ml-8">Dataiku · 2024</p>
-                            </div>
-
-                            <div class="p-4 rounded-xl bg-gray-50 dark:bg-dark-bg/50 border border-gray-200 dark:border-dark-border hover:border-primary-300 dark:hover:border-primary-700 transition-colors">
-                                <div class="flex items-center gap-3 mb-1">
-                                    <i class="fas fa-award text-amber-500"></i>
-                                    <h4 class="font-bold text-sm text-gray-900 dark:text-white">ML Practitioner Certificate</h4>
-                                </div>
-                                <p class="text-xs text-gray-500 dark:text-gray-500 ml-8">Dataiku · 2024</p>
-                            </div>
-
-                            <div class="p-4 rounded-xl bg-gray-50 dark:bg-dark-bg/50 border border-gray-200 dark:border-dark-border hover:border-primary-300 dark:hover:border-primary-700 transition-colors">
-                                <div class="flex items-center gap-3 mb-1">
-                                    <i class="fas fa-award text-blue-500"></i>
-                                    <h4 class="font-bold text-sm text-gray-900 dark:text-white">CISCO Certification</h4>
-                                </div>
-                                <p class="text-xs text-gray-500 dark:text-gray-500 ml-8">Cisco Networking Academy</p>
-                            </div>
-
-                            <div class="p-4 rounded-xl bg-gray-50 dark:bg-dark-bg/50 border border-gray-200 dark:border-dark-border hover:border-primary-300 dark:hover:border-primary-700 transition-colors">
-                                <div class="flex items-center gap-3 mb-1">
-                                    <i class="fas fa-book-open text-green-500"></i>
-                                    <h4 class="font-bold text-sm text-gray-900 dark:text-white">IT Essentials</h4>
-                                </div>
-                                <p class="text-xs text-gray-500 dark:text-gray-500 ml-8">Cisco Netacad · 2022</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== CONTACT SECTION ==================== -->
-    <section id="contact" class="py-20 md:py-28 bg-gray-100/50 dark:bg-dark-card/30 relative overflow-hidden">
-        <div class="blob w-80 h-80 bg-primary-300 top-1/2 left-0"></div>
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
-            <!-- Section Header -->
-            <div class="text-center mb-16 animate-on-scroll">
-                <span class="inline-block px-4 py-1.5 rounded-full bg-primary-50 dark:bg-primary-950/50 text-primary-600 dark:text-primary-400 text-sm font-semibold mb-4">Kontak</span>
-                <h2 class="font-display text-3xl sm:text-4xl font-bold text-gray-900 dark:text-white">Mari <span class="gradient-text">Terhubung</span></h2>
-                <p class="text-gray-500 dark:text-gray-500 mt-3 max-w-2xl mx-auto">Tertarik berkolaborasi atau memiliki proyek yang ingin diwujudkan? Jangan ragu untuk menghubungi saya!</p>
-            </div>
-
-            <div class="grid md:grid-cols-5 gap-8 max-w-5xl mx-auto">
-                <!-- Contact Info -->
-                <div class="md:col-span-2 space-y-4 animate-on-scroll from-left">
-                    <a href="mailto:jimmyfrnn12@gmail.com" class="flex items-center gap-4 p-5 glass rounded-2xl card-hover group">
-                        <div class="w-12 h-12 rounded-xl gradient-bg flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
-                            <i class="fas fa-envelope"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs text-gray-500 dark:text-gray-500 font-medium uppercase tracking-wider">Email</p>
-                            <p class="text-sm font-semibold text-gray-900 dark:text-white">jimmyfrnn12@gmail.com</p>
-                        </div>
-                    </a>
-
-                    <a href="tel:+6281384648798" class="flex items-center gap-4 p-5 glass rounded-2xl card-hover group">
-                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-green-500 to-emerald-500 flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
-                            <i class="fas fa-phone-alt"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs text-gray-500 dark:text-gray-500 font-medium uppercase tracking-wider">Telepon</p>
-                            <p class="text-sm font-semibold text-gray-900 dark:text-white">+62 813 8464 8798</p>
-                        </div>
-                    </a>
-
-                    <div class="flex items-center gap-4 p-5 glass rounded-2xl card-hover group">
-                        <div class="w-12 h-12 rounded-xl bg-gradient-to-br from-rose-500 to-pink-500 flex items-center justify-center text-white shrink-0 group-hover:scale-110 transition-transform">
-                            <i class="fas fa-map-marker-alt"></i>
-                        </div>
-                        <div>
-                            <p class="text-xs text-gray-500 dark:text-gray-500 font-medium uppercase tracking-wider">Lokasi</p>
-                            <p class="text-sm font-semibold text-gray-900 dark:text-white">Jakarta Timur, DKI Jakarta</p>
-                        </div>
-                    </div>
-
-                    <!-- Social Links -->
-                    <div class="flex gap-3 pt-2">
-                        <a href="https://linkedin.com/in/jimmyfernando" target="_blank" class="flex-1 flex items-center justify-center gap-2 py-3 glass rounded-xl text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-blue-600 hover:text-white hover:border-blue-600 transition-all duration-300">
-                            <i class="fab fa-linkedin-in"></i> LinkedIn
-                        </a>
-                        <a href="https://github.com/jimmyfernando" target="_blank" class="flex-1 flex items-center justify-center gap-2 py-3 glass rounded-xl text-sm font-medium text-gray-600 dark:text-gray-400 hover:bg-gray-800 hover:text-white hover:border-gray-800 transition-all duration-300">
-                            <i class="fab fa-github"></i> GitHub
-                        </a>
-                    </div>
-                </div>
-
-                <!-- Contact Form -->
-                <div class="md:col-span-3 animate-on-scroll from-right">
-                    <form id="contactForm" class="glass rounded-2xl p-8">
-                        <div class="grid sm:grid-cols-2 gap-4 mb-4">
-                            <div>
-                                <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Nama Lengkap</label>
-                                <input type="text" placeholder="Nama Anda" class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-dark-bg border border-gray-200 dark:border-dark-border text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all text-sm">
-                            </div>
-                            <div>
-                                <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Email</label>
-                                <input type="email" placeholder="email@contoh.com" class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-dark-bg border border-gray-200 dark:border-dark-border text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all text-sm">
-                            </div>
-                        </div>
-                        <div class="mb-4">
-                            <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Subjek</label>
-                            <input type="text" placeholder="Tentang apa?" class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-dark-bg border border-gray-200 dark:border-dark-border text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all text-sm">
-                        </div>
-                        <div class="mb-6">
-                            <label class="block text-sm font-semibold text-gray-700 dark:text-gray-300 mb-2">Pesan</label>
-                            <textarea rows="4" placeholder="Tulis pesan Anda di sini..." class="w-full px-4 py-3 rounded-xl bg-gray-50 dark:bg-dark-bg border border-gray-200 dark:border-dark-border text-gray-900 dark:text-white placeholder-gray-400 focus:ring-2 focus:ring-primary-500 focus:border-transparent outline-none transition-all resize-none text-sm"></textarea>
-                        </div>
-                        <button type="submit" class="w-full py-3.5 gradient-bg text-white font-semibold rounded-xl shadow-lg shadow-primary-500/25 hover:shadow-primary-500/40 transition-all duration-300 hover:scale-[1.02] flex items-center justify-center gap-2">
-                            <i class="fas fa-paper-plane"></i>
-                            Kirim Pesan
-                        </button>
-                    </form>
-                </div>
-            </div>
-        </div>
-    </section>
-
-    <!-- ==================== FOOTER ==================== -->
-    <footer class="py-8 border-t border-gray-200 dark:border-dark-border bg-white dark:bg-dark-bg">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-            <div class="flex flex-col md:flex-row items-center justify-between gap-4">
-                <div class="flex items-center gap-2">
-                    <div class="w-8 h-8 rounded-lg gradient-bg flex items-center justify-center text-white font-display font-bold text-sm">JF</div>
-                    <span class="text-sm text-gray-500 dark:text-gray-500">© 2026 Jimmy Fernando. All rights reserved.</span>
-                </div>
-                <div class="flex items-center gap-6">
-                    <a href="https://linkedin.com/in/jimmyfernando" target="_blank" class="text-gray-400 hover:text-primary-500 transition-colors"><i class="fab fa-linkedin-in text-lg"></i></a>
-                    <a href="https://github.com/jimmyfernando" target="_blank" class="text-gray-400 hover:text-primary-500 transition-colors"><i class="fab fa-github text-lg"></i></a>
-                    <a href="mailto:jimmyfrnn12@gmail.com" class="text-gray-400 hover:text-primary-500 transition-colors"><i class="fas fa-envelope text-lg"></i></a>
-                </div>
-            </div>
-        </div>
-    </footer>
-
-    <!-- ==================== PROJECT DETAILS MODAL ==================== -->
-    <div id="projectModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 opacity-0 pointer-events-none transition-all duration-300">
-        <div class="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeModal()"></div>
-        <div class="relative w-full max-w-2xl bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-2xl shadow-2xl overflow-hidden transform scale-95 transition-transform duration-300 max-h-[90vh] flex flex-col z-10">
-            <!-- Modal Header -->
-            <div id="modalHeader" class="p-6 gradient-bg text-white relative">
-                <button onclick="closeModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/20 hover:bg-black/40 text-white flex items-center justify-center transition-colors">
-                    <i class="fas fa-times"></i>
-                </button>
-                <span id="modalCategory" class="inline-block px-3 py-1 rounded-full bg-white/20 text-xs font-semibold uppercase tracking-wider mb-2">Web Application</span>
-                <h3 id="modalTitle" class="text-2xl font-display font-bold">Judul Proyek</h3>
-                <p id="modalOrg" class="text-white/80 text-sm mt-1">Organisasi / Kategori</p>
-            </div>
-            <!-- Modal Body -->
-            <div class="p-6 overflow-y-auto space-y-5 text-gray-700 dark:text-gray-300 text-sm">
-                <div>
-                    <h4 class="font-bold text-gray-900 dark:text-white uppercase tracking-wider text-xs mb-2">Deskripsi Proyek</h4>
-                    <p id="modalDesc" class="leading-relaxed text-gray-600 dark:text-gray-400"></p>
-                </div>
-                <div>
-                    <h4 class="font-bold text-gray-900 dark:text-white uppercase tracking-wider text-xs mb-2">Pencapaian & Fitur Utama</h4>
-                    <ul id="modalFeatures" class="space-y-2 text-gray-600 dark:text-gray-400"></ul>
-                </div>
-                <div>
-                    <h4 class="font-bold text-gray-900 dark:text-white uppercase tracking-wider text-xs mb-2">Teknologi & Perangkat</h4>
-                    <div id="modalTech" class="flex flex-wrap gap-2"></div>
-                </div>
-            </div>
-            <!-- Modal Footer -->
-            <div class="p-4 bg-gray-50 dark:bg-dark-bg/60 border-t border-gray-200 dark:border-dark-border flex items-center justify-end gap-3">
-                <button onclick="closeModal()" class="px-5 py-2.5 rounded-xl border border-gray-300 dark:border-dark-border text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-card font-medium transition-colors text-sm">Tutup</button>
-                <a id="modalLink" href="https://github.com/jimmyfernando" target="_blank" class="px-5 py-2.5 rounded-xl gradient-bg text-white font-medium shadow-md shadow-primary-500/20 hover:scale-105 transition-all text-sm flex items-center gap-1.5">
-                    <i class="fab fa-github"></i> Kunjungi Repositori
-                </a>
-            </div>
-        </div>
+        <button id="theme-toggle" class="control theme-button" type="button" aria-label="Ganti mode gelap" title="Ganti mode gelap">◐</button>
+      </div>
     </div>
+  </header>
 
-    <!-- ==================== BACK TO TOP ==================== -->
-    <button id="backToTop" class="fixed bottom-6 right-6 w-12 h-12 rounded-xl gradient-bg text-white shadow-lg shadow-primary-500/25 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:scale-110 z-50">
-        <i class="fas fa-arrow-up"></i>
-    </button>
+  <!-- ==================== MAIN CONTENT ==================== -->
+  <main id="main" class="page">
 
-    <!-- ==================== JAVASCRIPT ==================== -->
-    <script>
-        // ===== Dark Mode Toggle =====
-        const html = document.documentElement;
-        const themeToggle = document.getElementById('themeToggle');
-        const themeToggleMobile = document.getElementById('themeToggleMobile');
-        const themeToggleCircle = document.getElementById('themeToggleCircle');
+    <!-- HERO SECTION -->
+    <section class="hero" id="top" aria-labelledby="intro-title">
+      <div class="reveal">
+        <div class="hero-topline">
+          <span class="status-pill"><i class="status-dot" aria-hidden="true"></i><span data-en="Open to work" data-id="Terbuka untuk peluang kerja">Terbuka untuk peluang kerja</span></span>
+          <span class="hero-location">Jakarta, Indonesia</span>
+        </div>
+        <h1 class="serif hero-title" id="intro-title">
+          <span data-en="Fullstack developer & " data-id="Pengembang web & ">Pengembang web & </span><em data-en="UI/UX enthusiast." data-id="antarmuka pengguna.">antarmuka pengguna.</em>
+        </h1>
+        <p class="hero-focus" data-en="Information Systems · Laravel · MySQL · UI/UX Design" data-id="Sistem Informasi · Laravel · MySQL · Desain UI/UX">Sistem Informasi · Laravel · MySQL · Desain UI/UX</p>
+        <p class="hero-copy" data-en="Information Systems graduate from Universitas Darma Persada. Passionate in building practical web applications, streamlining quality workflows, and designing intuitive user interfaces." data-id="Mahasiswa Sarjana Sistem Informasi di Universitas Darma Persada. Berfokus pada pembangunan sistem web yang terstruktur, digitalisasi alur kerja Quality Control, dan perancangan antarmuka pengguna yang intuitif.">Mahasiswa Sarjana Sistem Informasi di Universitas Darma Persada. Berfokus pada pembangunan sistem web yang terstruktur, digitalisasi alur kerja Quality Control, dan perancangan antarmuka pengguna yang intuitif.</p>
+        <div class="hero-actions">
+          <a class="button" href="mailto:jimmyfrnn12@gmail.com"><span data-en="Get in touch" data-id="Hubungi saya">Hubungi saya</span><span class="button-arrow" aria-hidden="true">↗</span></a>
+          <a class="button button-secondary" href="CV_Jimmy_Fernando.pdf" download="CV_Jimmy_Fernando.pdf"><span data-en="Download CV" data-id="Unduh CV">Unduh CV</span><span class="button-arrow" aria-hidden="true">↓</span></a>
+        </div>
+      </div>
+      <div class="reveal">
+        <div class="hero-art" aria-label="Portrait of Jimmy Fernando" role="img" data-en-aria="Portrait of Jimmy Fernando" data-id-aria="Potret Jimmy Fernando">
+          <div class="art-grid" aria-hidden="true"></div>
+          <span class="art-index" data-en="FIELD NOTES · 01" data-id="CATATAN LAPANGAN · 01">CATATAN LAPANGAN · 01</span>
+          <img class="art-portrait" src="profile.png" alt="Jimmy Fernando" fetchpriority="high" decoding="async" />
+          <div class="art-signature">
+            <strong>Jimmy Fernando</strong>
+            <small data-en="B.S. Information Systems" data-id="Sarjana Sistem Informasi">Sarjana Sistem Informasi</small>
+          </div>
+          <span class="art-side-note" aria-hidden="true">PORTFOLIO · 2026</span>
+        </div>
+      </div>
+    </section>
 
-        // Check saved theme or system preference
-        const savedTheme = localStorage.getItem('theme');
-        if (savedTheme === 'dark' || (!savedTheme && window.matchMedia('(prefers-color-scheme: dark)').matches)) {
-            html.classList.add('dark');
-        }
+    <!-- CORE SKILLS STRIP -->
+    <section class="core-skills reveal" aria-labelledby="core-skills-title">
+      <div class="core-skills-heading">
+        <h2 id="core-skills-title" data-en="Core focus" data-id="Fokus utama">Fokus utama</h2>
+        <span data-en="Focus areas · Sub-skills" data-id="Bidang keahlian · Rincian">Bidang keahlian · Rincian</span>
+      </div>
+      <div class="core-skills-grid">
+        <article class="core-skill">
+          <h3 data-en="Web & Systems Development" data-id="Pengembangan Web & Sistem">Pengembangan Web &amp; Sistem</h3>
+          <span class="subskill-label" data-en="Sub-skills" data-id="Rincian keahlian">Rincian keahlian</span>
+          <p data-en="Fullstack Development · Laravel Framework · PHP · MySQL Database · RESTful APIs · WordPress CMS" data-id="Fullstack Development · Framework Laravel · PHP · Basis Data MySQL · RESTful APIs · WordPress CMS">Fullstack Development · Framework Laravel · PHP · Basis Data MySQL · RESTful APIs · WordPress CMS</p>
+        </article>
+        <article class="core-skill">
+          <h3 data-en="UI/UX & Prototyping" data-id="UI/UX & Prototipe">UI/UX &amp; Prototipe</h3>
+          <span class="subskill-label" data-en="Sub-skills" data-id="Rincian keahlian">Rincian keahlian</span>
+          <p data-en="Wireframing · High-Fidelity UI · Interactive Prototyping in Figma · Design Systems · Responsive Layout" data-id="Wireframing · UI High-Fidelity · Prototipe Interaktif di Figma · Design Systems · Tata Letak Responsif">Wireframing · UI High-Fidelity · Prototipe Interaktif di Figma · Design Systems · Tata Letak Responsif</p>
+        </article>
+        <article class="core-skill">
+          <h3 data-en="Data, Creative & Operations" data-id="Data, Kreatif & Operasional">Data, Kreatif &amp; Operasional</h3>
+          <span class="subskill-label" data-en="Sub-skills" data-id="Rincian keahlian">Rincian keahlian</span>
+          <p data-en="Dataiku ML & Core Design · Cisco IT Essentials · Video Editing (CapCut) · Digital Commerce & CRM" data-id="Dataiku ML & Core Design · Cisco IT Essentials · Penyuntingan Video (CapCut) · E-Commerce & Layanan Pelanggan">Dataiku ML &amp; Core Design · Cisco IT Essentials · Penyuntingan Video (CapCut) · E-Commerce &amp; Layanan Pelanggan</p>
+        </article>
+      </div>
+    </section>
 
-        function toggleTheme() {
-            html.classList.toggle('dark');
-            localStorage.setItem('theme', html.classList.contains('dark') ? 'dark' : 'light');
-            // Animate toggle circle
-            if (html.classList.contains('dark')) {
-                themeToggleCircle.style.transform = 'translateX(28px)';
-            } else {
-                themeToggleCircle.style.transform = 'translateX(0)';
-            }
-        }
+    <!-- SECTION 01: ABOUT -->
+    <section class="section" id="about" aria-labelledby="about-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-kicker" data-en="01 / About" data-id="01 / Tentang">01 / Tentang</p>
+          <h2 class="serif section-title" id="about-title" data-en="A quick introduction." data-id="Sekilas tentang saya.">Sekilas tentang saya.</h2>
+        </div>
+        <p class="section-note" data-en="Information Systems · Jakarta" data-id="Sistem Informasi · Jakarta">Sistem Informasi · Jakarta</p>
+      </div>
+      <div class="about-grid">
+        <div class="about-copy reveal">
+          <p data-en="I am an Information Systems undergraduate at Universitas Darma Persada (GPA 3.58) with a strong passion for web engineering and user interface design. I bridge technical data management with intuitive digital interfaces." data-id="Saya adalah mahasiswa Sarjana Sistem Informasi di Universitas Darma Persada (IPK 3,58) dengan ketertarikan mendalam pada rekayasa web dan perancangan antarmuka pengguna. Saya menghubungkan pengelolaan data teknis dengan antarmuka digital yang intuitif.">Saya adalah mahasiswa Sarjana Sistem Informasi di Universitas Darma Persada (IPK 3,58) dengan ketertarikan mendalam pada rekayasa web dan perancangan antarmuka pengguna. Saya menghubungkan pengelolaan data teknis dengan antarmuka digital yang intuitif.</p>
+          <p data-en="Through hands-on experience as a Junior Web Developer intern and Fullstack Developer on industrial final projects, I have implemented end-to-end quality control web systems, structured MySQL relational schemas, and revamped modern corporate websites. I am self-driven, detail-oriented, and eager to deliver impactful digital solutions." data-id="Melalui pengalaman langsung sebagai Junior Web Developer magang dan Fullstack Developer proyek industri, saya telah membangun sistem web penanganan Quality Control secara end-to-end, merancang skema relasional MySQL, dan merombak tampilan situs perusahaan modern. Saya mandiri, cermat, dan bersemangat menghadirkan solusi digital yang berdampak nyata.">Melalui pengalaman langsung sebagai Junior Web Developer magang dan Fullstack Developer proyek industri, saya telah membangun sistem web penanganan Quality Control secara end-to-end, merancang skema relasional MySQL, dan merombak tampilan situs perusahaan modern. Saya mandiri, cermat, dan bersemangat menghadirkan solusi digital yang berdampak nyata.</p>
+        </div>
+      </div>
+    </section>
 
-        // Init toggle position
-        if (html.classList.contains('dark')) {
-            themeToggleCircle.style.transform = 'translateX(28px)';
-        }
+    <!-- SECTION 02: EXPERIENCE -->
+    <section class="section" id="work" aria-labelledby="work-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-kicker" data-en="02 / Experience" data-id="02 / Pengalaman">02 / Pengalaman</p>
+          <h2 class="serif section-title" id="work-title" data-en="Professional journey." data-id="Perjalanan profesional.">Perjalanan profesional.</h2>
+        </div>
+        <p class="section-note" data-en="Fullstack · Web · Operations" data-id="Fullstack · Web · Operasional">Fullstack · Web · Operasional</p>
+      </div>
+      <div class="timeline reveal">
 
-        themeToggle.addEventListener('click', toggleTheme);
-        themeToggleMobile.addEventListener('click', toggleTheme);
+        <!-- Experience 1 -->
+        <article class="timeline-item">
+          <div class="timeline-date">
+            <strong>Des 2025 — Jul 2026</strong>
+            <span data-en="Jakarta, Indonesia" data-id="Jakarta, Indonesia">Jakarta, Indonesia</span>
+          </div>
+          <div>
+            <h3 class="timeline-role">Fullstack Developer</h3>
+            <p class="timeline-company" data-en="PT. Metinca Prima Industrial Works · Final Project" data-id="PT. Metinca Prima Industrial Works · Proyek Akhir">PT. Metinca Prima Industrial Works · Proyek Akhir</p>
+            <div class="timeline-desc">
+              <ul>
+                <li data-en="Designed and implemented an end-to-end web-based Quality Control claim system, from customer ticket submission to internal investigation modules." data-id="Merancang dan mengimplementasikan sistem Quality Control berbasis web untuk penanganan klaim produk rusak secara end-to-end, mulai dari portal pelanggan hingga modul investigasi tim internal.">Merancang dan mengimplementasikan sistem Quality Control berbasis web untuk penanganan klaim produk rusak secara end-to-end, mulai dari portal pelanggan hingga modul investigasi tim internal.</li>
+                <li data-en="Constructed centralized complaint validation workflows with digital proof uploads and defect categorization to reduce verification time for QC Staff." data-id="Membangun alur validasi komplain terpusat dengan fitur unggah bukti digital dan kategorisasi jenis cacat produk guna memangkas durasi verifikasi oleh para Staff Quality Control.">Membangun alur validasi komplain terpusat dengan fitur unggah bukti digital dan kategorisasi jenis cacat produk guna memangkas durasi verifikasi oleh para Staff Quality Control.</li>
+                <li data-en="Engineered QC ticket monitoring dashboards using Laravel Framework to track return SLA resolutions transparently." data-id="Mengembangkan dasbor manajemen tiket QC menggunakan framework Laravel untuk memantau SLA penyelesaian retur barang secara transparan.">Mengembangkan dasbor manajemen tiket QC menggunakan framework Laravel untuk memantau SLA penyelesaian retur barang secara transparan.</li>
+                <li data-en="Structured relational database schemas in MySQL for complaint audit trails, damage inspections, and periodic management reports." data-id="Mendesain skema basis data relasional pada MySQL untuk merekam histori keluhan, status audit kerusakan produk, dan pelaporan berkala manajemen.">Mendesain skema basis data relasional pada MySQL untuk merekam histori keluhan, status audit kerusakan produk, dan pelaporan berkala manajemen.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
 
-        // ===== Mobile Menu =====
-        const menuBtn = document.getElementById('menuBtn');
-        const mobileMenu = document.getElementById('mobileMenu');
-        let menuOpen = false;
+        <!-- Experience 2 -->
+        <article class="timeline-item">
+          <div class="timeline-date">
+            <strong>Mar — Jun 2025</strong>
+            <span data-en="Jakarta, Indonesia" data-id="Jakarta, Indonesia">Jakarta, Indonesia</span>
+          </div>
+          <div>
+            <h3 class="timeline-role">Junior Web Developer</h3>
+            <p class="timeline-company" data-en="PT. Rezeki Utami Sejahtera · Internship" data-id="PT. Rezeki Utami Sejahtera · Magang">PT. Rezeki Utami Sejahtera · Magang</p>
+            <div class="timeline-desc">
+              <ul>
+                <li data-en="Revamped the company website UI/UX into a modern, fresh, and responsive interface." data-id="Merombak total antarmuka pengguna (UI) serta pengalaman pengguna (UX) situs web perusahaan menjadi tampilan yang segar dan modern.">Merombak total antarmuka pengguna (UI) serta pengalaman pengguna (UX) situs web perusahaan menjadi tampilan yang segar dan modern.</li>
+                <li data-en="Executed UI designs into functional web pages utilizing WordPress CMS and custom styling." data-id="Mengimplementasikan rancangan antarmuka pengguna pada platform situs web dengan memanfaatkan WordPress.">Mengimplementasikan rancangan antarmuka pengguna pada platform situs web dengan memanfaatkan WordPress.</li>
+                <li data-en="Documented development milestones and delivered regular progress briefings to project leads." data-id="Mencatat setiap tindakan pengembangan yang telah dilaksanakan serta memberikan laporan perkembangan berkala kepada atasan terkait.">Mencatat setiap tindakan pengembangan yang telah dilaksanakan serta memberikan laporan perkembangan berkala kepada atasan terkait.</li>
+                <li data-en="Presented completed UI/UX mockups and prototypes to internal company stakeholders." data-id="Mempresentasikan hasil rancangan antarmuka pengguna dan pengalaman pengguna yang telah dikerjakan di hadapan stakeholder.">Mempresentasikan hasil rancangan antarmuka pengguna dan pengalaman pengguna yang telah dikerjakan di hadapan stakeholder.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
 
-        menuBtn.addEventListener('click', () => {
-            menuOpen = !menuOpen;
-            if (menuOpen) {
-                menuBtn.classList.add('menu-open');
-                mobileMenu.classList.remove('opacity-0', 'pointer-events-none');
-                mobileMenu.classList.add('opacity-100');
-                document.body.style.overflow = 'hidden';
-            } else {
-                closeMenu();
-            }
+        <!-- Experience 3 -->
+        <article class="timeline-item">
+          <div class="timeline-date">
+            <strong>2019 — 2020</strong>
+            <span data-en="Bekasi, Indonesia" data-id="Bekasi, Indonesia">Bekasi, Indonesia</span>
+          </div>
+          <div>
+            <h3 class="timeline-role" data-en="Store Operations & Customer Support" data-id="Penjaga Toko / Staf Operasional">Penjaga Toko / Staf Operasional</h3>
+            <p class="timeline-company" data-en="Toko Alat Mesin Star Jaya · Freelance" data-id="Toko Alat Mesin Star Jaya · Harian Lepas">Toko Alat Mesin Star Jaya · Harian Lepas</p>
+            <div class="timeline-desc">
+              <ul>
+                <li data-en="Supervised daily operational workflows including store opening, closing, and inventory inspection." data-id="Mengatur kegiatan operasional sehari-hari toko termasuk prosedur pembukaan dan penutupan toko.">Mengatur kegiatan operasional sehari-hari toko termasuk prosedur pembukaan dan penutupan toko.</li>
+                <li data-en="Delivered quality customer service, assisting buyers in selecting mechanical parts and resolving inquiries." data-id="Menyediakan pelayanan pelanggan yang berkualitas, membantu pelanggan memilih spesifikasi produk, serta menjawab pertanyaan teknis.">Menyediakan pelayanan pelanggan yang berkualitas, membantu pelanggan memilih spesifikasi produk, serta menjawab pertanyaan teknis.</li>
+                <li data-en="Handled cash register transactions, accurate payment balancing, and store cleanliness." data-id="Mengatur transaksi uang tunai, memproses pembayaran secara teliti, serta memastikan kerapian toko.">Mengatur transaksi uang tunai, memproses pembayaran secara teliti, serta memastikan kerapian toko.</li>
+              </ul>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SECTION 03: SELECTED WORK -->
+    <section class="section" id="projects" aria-labelledby="projects-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-kicker" data-en="03 / Selected work" data-id="03 / Karya pilihan">03 / Karya pilihan</p>
+          <h2 class="serif section-title" id="projects-title" data-en="Web systems & design." data-id="Sistem web & desain.">Sistem web &amp; desain.</h2>
+        </div>
+        <p class="section-note" data-en="Selected projects & case studies." data-id="Pilihan proyek dan studi kasus.">Pilihan proyek dan studi kasus.</p>
+      </div>
+      <div class="project-grid">
+
+        <!-- Project 1 -->
+        <article class="project-card reveal">
+          <div class="project-art" style="background: linear-gradient(135deg, rgba(71,106,81,.18), rgba(48,79,59,.3));">
+            <span class="project-art-icon">📋</span>
+            <span class="project-art-label" data-en="WEB APPLICATION / 01" data-id="APLIKASI WEB / 01">APLIKASI WEB / 01</span>
+            <span class="project-art-caption">LARAVEL · MYSQL · QC SYSTEM</span>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-index">01</span>
+              <span data-en="INDUSTRIAL PROJECT" data-id="PROYEK INDUSTRI">PROYEK INDUSTRI</span>
+            </div>
+            <h3 class="project-title" data-en="Quality Control Claim System" data-id="Sistem Quality Control Klaim Produk">Sistem Quality Control Klaim Produk</h3>
+            <p class="project-desc" data-en="End-to-end defect claim tracking platform for PT Metinca Prima Industrial Works, featuring customer ticket submission, proof uploads, and real-time SLA dashboards." data-id="Sistem web penanganan klaim produk cacat secara end-to-end untuk PT Metinca Prima Industrial Works dengan portal tiket pelanggan, unggah bukti digital, dan dasbor SLA.">Sistem web penanganan klaim produk cacat secara end-to-end untuk PT Metinca Prima Industrial Works dengan portal tiket pelanggan, unggah bukti digital, dan dasbor SLA.</p>
+            <div class="tag-list">
+              <span class="tag">LARAVEL</span>
+              <span class="tag">MYSQL</span>
+              <span class="tag">SLA DASHBOARD</span>
+            </div>
+            <div class="project-links">
+              <button type="button" onclick="openModal(1)"><span data-en="View details" data-id="Lihat detail">Lihat detail</span><span aria-hidden="true">↗</span></button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 2 -->
+        <article class="project-card reveal">
+          <div class="project-art" style="background: linear-gradient(135deg, rgba(128,100,58,.16), rgba(71,106,81,.2));">
+            <span class="project-art-icon">📱</span>
+            <span class="project-art-label" data-en="MOBILE UI/UX / 02" data-id="MOBILE UI/UX / 02">MOBILE UI/UX / 02</span>
+            <span class="project-art-caption">FIGMA · PROTOTYPE · DESIGN SYSTEM</span>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-index">02</span>
+              <span data-en="SELF PROJECT" data-id="PROYEK MANDIRI">PROYEK MANDIRI</span>
+            </div>
+            <h3 class="project-title" data-en="Mobile App UI/UX Design" data-id="Desain Mobile UI/UX & Prototipe">Desain Mobile UI/UX &amp; Prototipe</h3>
+            <p class="project-desc" data-en="Comprehensive mobile interface architecture in Figma, with high-fidelity wireframes, design tokens, interactive micro-animations, and complete user journeys." data-id="Perancangan desain antarmuka mobile komprehensif di Figma, meliputi wireframe high-fidelity, design system atomik, micro-interaction, dan simulasi alur navigasi pengguna.">Perancangan desain antarmuka mobile komprehensif di Figma, meliputi wireframe high-fidelity, design system atomik, micro-interaction, dan simulasi alur navigasi pengguna.</p>
+            <div class="tag-list">
+              <span class="tag">FIGMA</span>
+              <span class="tag">PROTOTYPING</span>
+              <span class="tag">UI/UX</span>
+            </div>
+            <div class="project-links">
+              <button type="button" onclick="openModal(2)"><span data-en="View details" data-id="Lihat detail">Lihat detail</span><span aria-hidden="true">↗</span></button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 3 -->
+        <article class="project-card reveal">
+          <div class="project-art" style="background: linear-gradient(135deg, rgba(71,106,81,.22), rgba(128,100,58,.18));">
+            <span class="project-art-icon">🌐</span>
+            <span class="project-art-label" data-en="CORPORATE CMS / 03" data-id="CMS PERUSAHAAN / 03">CMS PERUSAHAAN / 03</span>
+            <span class="project-art-caption">WORDPRESS · UI OVERHAUL · CMS</span>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-index">03</span>
+              <span data-en="CLIENT INTERNSHIP" data-id="PROYEK MAGANG">PROYEK MAGANG</span>
+            </div>
+            <h3 class="project-title" data-en="Company Website Modernization" data-id="Modernisasi Website Perusahaan">Modernisasi Website Perusahaan</h3>
+            <p class="project-desc" data-en="Complete front-end overhaul of PT Rezeki Utami Sejahtera's corporate web identity on WordPress, optimizing mobile responsiveness and client navigation ease." data-id="Merombak antarmuka web perusahaan PT Rezeki Utami Sejahtera dengan WordPress, meningkatkan estetika profesional dan performa navigasi yang responsif di semua perangkat.">Merombak antarmuka web perusahaan PT Rezeki Utami Sejahtera dengan WordPress, meningkatkan estetika profesional dan performa navigasi yang responsif di semua perangkat.</p>
+            <div class="tag-list">
+              <span class="tag">WORDPRESS</span>
+              <span class="tag">HTML/CSS</span>
+              <span class="tag">REDESIGN</span>
+            </div>
+            <div class="project-links">
+              <button type="button" onclick="openModal(3)"><span data-en="View details" data-id="Lihat detail">Lihat detail</span><span aria-hidden="true">↗</span></button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 4 -->
+        <article class="project-card reveal">
+          <div class="project-art" style="background: linear-gradient(135deg, rgba(200,80,60,.14), rgba(71,106,81,.16));">
+            <span class="project-art-icon">🎬</span>
+            <span class="project-art-label" data-en="MULTIMEDIA / 04" data-id="MULTIMEDIA / 04">MULTIMEDIA / 04</span>
+            <span class="project-art-caption">CAPCUT · AUDIO MIXING · PACING</span>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-index">04</span>
+              <span data-en="CREATIVE WORK" data-id="KARYA KREATIF">KARYA KREATIF</span>
+            </div>
+            <h3 class="project-title" data-en="Short-Form Video Production" data-id="Penyuntingan Video Pendek">Penyuntingan Video Pendek</h3>
+            <p class="project-desc" data-en="Dynamic video editing for digital media, focusing on selective cut trimming, background noise cancellation, balanced audio tracks, and animated motion titles." data-id="Produksi konten video kreatif dengan pemotongan footage presisi, pembersihan noise audio, penyeimbangan volume musik latar, serta tipografi subtitle dinamis.">Produksi konten video kreatif dengan pemotongan footage presisi, pembersihan noise audio, penyeimbangan volume musik latar, serta tipografi subtitle dinamis.</p>
+            <div class="tag-list">
+              <span class="tag">CAPCUT</span>
+              <span class="tag">AUDIO MIXING</span>
+              <span class="tag">MOTION</span>
+            </div>
+            <div class="project-links">
+              <button type="button" onclick="openModal(4)"><span data-en="View details" data-id="Lihat detail">Lihat detail</span><span aria-hidden="true">↗</span></button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 5 -->
+        <article class="project-card reveal">
+          <div class="project-art" style="background: linear-gradient(135deg, rgba(48,79,59,.25), rgba(128,100,58,.14));">
+            <span class="project-art-icon">📡</span>
+            <span class="project-art-label" data-en="STREAMING / 05" data-id="BROADCASTING / 05">BROADCASTING / 05</span>
+            <span class="project-art-caption">TIKTOK LIVE · ROBLOX · COMMUNITY</span>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-index">05</span>
+              <span data-en="COMMUNITY PROJECT" data-id="PROYEK KOMUNITAS">PROYEK KOMUNITAS</span>
+            </div>
+            <h3 class="project-title" data-en="Game Livestreaming & Engagement" data-id="Live Streaming Game & Komunitas">Live Streaming Game &amp; Komunitas</h3>
+            <p class="project-desc" data-en="Interactive broadcasting on TikTok Live Studio within Roblox ecosystem, managing live audio-visual broadcasting tools and real-time audience engagement." data-id="Penyiaran langsung (livestreaming) interaktif di TikTok Live Studio pada platform Roblox, mengelola setup teknis penyiaran dan interaksi penonton secara real-time.">Penyiaran langsung (livestreaming) interaktif di TikTok Live Studio pada platform Roblox, mengelola setup teknis penyiaran dan interaksi penonton secara real-time.</p>
+            <div class="tag-list">
+              <span class="tag">TIKTOK STUDIO</span>
+              <span class="tag">BROADCASTING</span>
+              <span class="tag">ROBLOX</span>
+            </div>
+            <div class="project-links">
+              <button type="button" onclick="openModal(5)"><span data-en="View details" data-id="Lihat detail">Lihat detail</span><span aria-hidden="true">↗</span></button>
+            </div>
+          </div>
+        </article>
+
+        <!-- Project 6 -->
+        <article class="project-card reveal">
+          <div class="project-art" style="background: linear-gradient(135deg, rgba(128,100,58,.22), rgba(48,79,59,.2));">
+            <span class="project-art-icon">📦</span>
+            <span class="project-art-label" data-en="DIGITAL COMMERCE / 06" data-id="PERDAGANGAN DIGITAL / 06">PERDAGANGAN DIGITAL / 06</span>
+            <span class="project-art-caption">ITEMKU · FACEBOOK · CRM</span>
+          </div>
+          <div class="project-body">
+            <div class="project-meta">
+              <span class="project-index">06</span>
+              <span data-en="DIGITAL MARKET" data-id="PASAR DIGITAL">PASAR DIGITAL</span>
+            </div>
+            <h3 class="project-title" data-en="Digital Item Commerce & CRM" data-id="Perdagangan Komoditas Digital">Perdagangan Komoditas Digital</h3>
+            <p class="project-desc" data-en="Managing virtual asset transactions across Itemku & Facebook, maintaining prompt customer communications, transparent pricing, and trusted completion rates." data-id="Mengelola aktivitas transaksi jual-beli komoditas virtual pada marketplace Itemku dan Facebook, menjaga komunikasi langsung yang transparan dan terpercaya dengan konsumen.">Mengelola aktivitas transaksi jual-beli komoditas virtual pada marketplace Itemku dan Facebook, menjaga komunikasi langsung yang transparan dan terpercaya dengan konsumen.</p>
+            <div class="tag-list">
+              <span class="tag">E-COMMERCE</span>
+              <span class="tag">CRM</span>
+              <span class="tag">MARKETPLACE</span>
+            </div>
+            <div class="project-links">
+              <button type="button" onclick="openModal(6)"><span data-en="View details" data-id="Lihat detail">Lihat detail</span><span aria-hidden="true">↗</span></button>
+            </div>
+          </div>
+        </article>
+
+      </div>
+    </section>
+
+    <!-- SECTION 04: TOOLKIT -->
+    <section class="section" id="skills" aria-labelledby="skills-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-kicker" data-en="04 / Toolkit" data-id="04 / Keahlian">04 / Keahlian</p>
+          <h2 class="serif section-title" id="skills-title" data-en="Tools & competencies." data-id="Perangkat & kompetensi.">Perangkat &amp; kompetensi.</h2>
+        </div>
+        <p class="section-note" data-en="Tech stack · Methods · Work style" data-id="Perangkat · Metode · Cara kerja">Perangkat · Metode · Cara kerja</p>
+      </div>
+      <div class="toolkit-grid">
+        <article class="toolkit-card reveal">
+          <span class="toolkit-icon" aria-hidden="true">01</span>
+          <h3 class="toolkit-title" data-en="Web & Backend" data-id="Web & Backend">Web &amp; Backend</h3>
+          <p class="toolkit-copy">
+            <strong>Laravel</strong> · PHP · <strong>MySQL</strong> · JavaScript · HTML5 / CSS3 · WordPress · Visual Basic · Git Version Control
+          </p>
+        </article>
+        <article class="toolkit-card reveal">
+          <span class="toolkit-icon" aria-hidden="true">02</span>
+          <h3 class="toolkit-title" data-en="Design, Data & Tools" data-id="Desain, Data & Alat">Desain, Data &amp; Alat</h3>
+          <p class="toolkit-copy">
+            <strong>Figma (UI/UX)</strong> · Canva · CapCut · TikTok Live Studio · Dataiku (Core &amp; ML) · Cisco Netacad IT Essentials
+          </p>
+        </article>
+        <article class="toolkit-card reveal">
+          <span class="toolkit-icon" aria-hidden="true">03</span>
+          <h3 class="toolkit-title" data-en="Working Style & Soft Skills" data-id="Karakter & Cara Kerja">Karakter &amp; Cara Kerja</h3>
+          <p class="toolkit-copy" data-en="Detail-oriented · Autonomous problem solving · Transparent communication · Fast adaptation · Structured reporting" data-id="Cermat & teliti · Mandiri dalam pemecahan masalah · Komunikasi transparan · Cepat beradaptasi · Pelaporan alur kerja yang rapi">
+            Cermat &amp; teliti · Mandiri dalam pemecahan masalah · Komunikasi transparan · Cepat beradaptasi · Pelaporan alur kerja yang rapi
+          </p>
+        </article>
+      </div>
+    </section>
+
+    <!-- SECTION 05: BACKGROUND -->
+    <section class="section" id="background" aria-labelledby="background-title">
+      <div class="section-heading reveal">
+        <div>
+          <p class="section-kicker" data-en="05 / Background" data-id="05 / Pendidikan">05 / Pendidikan</p>
+          <h2 class="serif section-title" id="background-title" data-en="Education & credentials." data-id="Pendidikan & sertifikat.">Pendidikan &amp; sertifikat.</h2>
+        </div>
+        <p class="section-note" data-en="Academic record · GPA 3.58 · Verified credentials" data-id="Akademik · IPK 3,58 · Sertifikasi terverifikasi">Akademik · IPK 3,58 · Sertifikasi terverifikasi</p>
+      </div>
+      <div class="background-grid">
+
+        <!-- Education Column -->
+        <div class="reveal">
+          <h3 class="subsection-title">
+            <span data-en="Formal Education" data-id="Pendidikan Formal">Pendidikan Formal</span>
+            <span class="subsection-count" data-en="02 INSTITUTIONS" data-id="02 LEMBAGA">02 LEMBAGA</span>
+          </h3>
+          <ul class="education-list">
+            <li class="education-item">
+              <span>
+                <strong>Universitas Darma Persada</strong>
+                <small data-en="B.S. Information Systems · Jakarta, Indonesia" data-id="S1 Sistem Informasi · Jakarta, Indonesia">S1 Sistem Informasi · Jakarta, Indonesia</small>
+              </span>
+              <span class="education-meta">
+                <b>2022–2026</b><br />
+                <span data-en="GPA" data-id="IPK">IPK</span> 3.58
+              </span>
+            </li>
+            <li class="education-item">
+              <span>
+                <strong>SMAN 83 Jakarta</strong>
+                <small data-en="High School Diploma · Jakarta, Indonesia" data-id="Pendidikan Menengah Atas · Jakarta, Indonesia">Pendidikan Menengah Atas · Jakarta, Indonesia</small>
+              </span>
+              <span class="education-meta">
+                <b>2019–2022</b>
+              </span>
+            </li>
+          </ul>
+
+          <h3 class="subsection-title" style="margin-top: 26px;">
+            <span data-en="Organizational Experience" data-id="Pengalaman Organisasi">Pengalaman Organisasi</span>
+            <span class="subsection-count" data-en="02 ROLES" data-id="02 PERAN">02 PERAN</span>
+          </h3>
+          <ul class="education-list">
+            <li class="education-item">
+              <span>
+                <strong data-en="Himpunan Mahasiswa Sistem Informasi (HMSI)" data-id="Himpunan Mahasiswa Sistem Informasi (HMSI)">HMSI — Universitas Darma Persada</strong>
+                <small data-en="Organizing university IT seminars, coordinating technical events & student discussions." data-id="Mengatur kepanitiaan seminar dan kegiatan yang berhubungan dengan sistem informasi di universitas.">Mengatur kepanitiaan seminar dan kegiatan yang berhubungan dengan sistem informasi di universitas.</small>
+              </span>
+              <span class="education-meta">
+                <b>2023–2024</b>
+              </span>
+            </li>
+            <li class="education-item">
+              <span>
+                <strong>Marawis Club — SMAN 83 Jakarta</strong>
+                <small data-en="Performing during official school ceremonies and city mayoral reception events." data-id="Tampil dalam upacara penyambutan walikota dan acara seremonial sekolah.">Tampil dalam upacara penyambutan walikota dan acara seremonial sekolah.</small>
+              </span>
+              <span class="education-meta">
+                <b>2019–2022</b>
+              </span>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Certificates Column -->
+        <div class="reveal">
+          <h3 class="subsection-title">
+            <span data-en="Certifications & Modules" data-id="Sertifikasi & Modul">Sertifikasi &amp; Modul</span>
+            <span class="subsection-count" data-en="04 CREDENTIALS" data-id="04 SERTIFIKAT">04 SERTIFIKAT</span>
+          </h3>
+          <ul class="certificate-list">
+            <li class="certificate-item">
+              <span>
+                <strong>Core Designer Certificate</strong>
+                <small>Dataiku · 2024</small>
+              </span>
+              <span class="education-meta"><b>Dataiku</b><br />2024</span>
+            </li>
+            <li class="certificate-item">
+              <span>
+                <strong>ML Practitioner Certificate</strong>
+                <small>Dataiku · 2024</small>
+              </span>
+              <span class="education-meta"><b>Dataiku</b><br />2024</span>
+            </li>
+            <li class="certificate-item">
+              <span>
+                <strong>IT Essentials</strong>
+                <small>Cisco Networking Academy · 2022</small>
+              </span>
+              <span class="education-meta"><b>CISCO</b><br />2022</span>
+            </li>
+            <li class="certificate-item">
+              <span>
+                <strong>Cisco Certification</strong>
+                <small>Cisco Netacad IT Training</small>
+              </span>
+              <span class="education-meta"><b>CISCO</b><br />Verified</span>
+            </li>
+          </ul>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- SECTION 06: CONTACT -->
+    <section class="contact-section" id="contact" aria-labelledby="contact-title">
+      <div class="contact-grid">
+        <div class="reveal">
+          <p class="section-kicker" data-en="06 / Contact" data-id="06 / Kontak">06 / Kontak</p>
+          <h2 class="serif contact-title" id="contact-title">
+            <span data-en="Let’s connect." data-id="Mari terhubung.">Mari terhubung.</span>
+          </h2>
+          <p class="contact-intro" data-en="If you have an open opportunity, project inquiry, or collaboration idea in mind, feel free to reach out. I look forward to contributing." data-id="Jika Anda memiliki peluang kerja sama, proyek pengembangan web, atau lowongan yang sesuai, silakan hubungi saya. Saya siap berdiskusi.">Jika Anda memiliki peluang kerja sama, proyek pengembangan web, atau lowongan yang sesuai, silakan hubungi saya. Saya siap berdiskusi.</p>
+          <div class="contact-links">
+            <a class="contact-link" href="mailto:jimmyfrnn12@gmail.com">
+              <small>Email</small>
+              <span>jimmyfrnn12@gmail.com</span>
+            </a>
+            <a class="contact-link" href="tel:+6281384648798">
+              <small data-en="Phone / WhatsApp" data-id="Telepon / WhatsApp">Telepon / WhatsApp</small>
+              <span>+62 813-8464-8798</span>
+            </a>
+            <a class="contact-link" href="https://github.com/apuyyyy" target="_blank" rel="noopener noreferrer">
+              <small>GitHub</small>
+              <span>github.com/apuyyyy</span>
+            </a>
+            <div class="contact-link">
+              <small data-en="Location" data-id="Domisili">Domisili</small>
+              <span data-en="East Jakarta, DKI Jakarta" data-id="Cakung, Jakarta Timur">Cakung, Jakarta Timur</span>
+            </div>
+          </div>
+        </div>
+
+        <form id="contact-form" class="contact-form reveal">
+          <h3 class="form-heading" data-en="Send a short message" data-id="Kirim pesan langsung">Kirim pesan langsung</h3>
+          <div class="field">
+            <label for="contact-name" data-en="Your name" data-id="Nama Anda">Nama Anda</label>
+            <input id="contact-name" name="name" autocomplete="name" required data-en-placeholder="Full name" data-id-placeholder="Nama lengkap" placeholder="Nama lengkap" />
+          </div>
+          <div class="field">
+            <label for="contact-email" data-en="Email address" data-id="Alamat email">Alamat email</label>
+            <input id="contact-email" name="email" type="email" autocomplete="email" required data-en-placeholder="name@example.com" data-id-placeholder="nama@email.com" placeholder="nama@email.com" />
+          </div>
+          <div class="field">
+            <label for="contact-message" data-en="Message" data-id="Pesan">Pesan</label>
+            <textarea id="contact-message" name="message" required data-en-placeholder="Tell me briefly about what you have in mind…" data-id-placeholder="Ceritakan singkat peluang atau hal yang ingin didiskusikan…" placeholder="Ceritakan singkat peluang atau hal yang ingin didiskusikan…"></textarea>
+          </div>
+          <button class="button form-submit" type="submit">
+            <span data-en="Open email draft" data-id="Buka draf email">Buka draf email</span>
+            <span class="button-arrow" aria-hidden="true">↗</span>
+          </button>
+          <p class="form-note" data-en="This opens your default email client with the message ready to review." data-id="Pesan akan disiapkan rapi di aplikasi email Anda untuk ditinjau dan dikirim langsung.">Pesan akan disiapkan rapi di aplikasi email Anda untuk ditinjau dan dikirim langsung.</p>
+          <p class="form-status" id="form-status" aria-live="polite"></p>
+        </form>
+      </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="site-footer">
+      <span>© <span id="year">2026</span> Jimmy Fernando</span>
+      <span data-en="Jakarta, Indonesia" data-id="Jakarta, Indonesia">Jakarta, Indonesia</span>
+    </footer>
+  </main>
+
+  <!-- ==================== PROJECT DETAILS MODAL ==================== -->
+  <div id="projectModal" class="modal-overlay" onclick="closeModal(event)">
+    <div class="modal-card" onclick="event.stopPropagation()">
+      <div class="modal-header">
+        <div>
+          <small id="modalCategory">WEB APPLICATION</small>
+          <h3 id="modalTitle">Sistem Quality Control Klaim Produk</h3>
+        </div>
+        <button class="modal-close" onclick="closeModal()" aria-label="Tutup modal">×</button>
+      </div>
+      <div class="modal-body">
+        <h4 data-en="Project Overview" data-id="Ringkasan Proyek">Ringkasan Proyek</h4>
+        <p id="modalDesc"></p>
+
+        <h4 data-en="Key Features & Contributions" data-id="Fitur & Pencapaian Utama">Fitur &amp; Pencapaian Utama</h4>
+        <ul id="modalFeatures"></ul>
+
+        <h4 data-en="Tech Stack & Tools" data-id="Teknologi yang Digunakan">Teknologi yang Digunakan</h4>
+        <div id="modalTech" class="tag-list" style="margin-top: 8px;"></div>
+      </div>
+      <div class="modal-footer">
+        <button class="button button-secondary" type="button" onclick="closeModal()" data-en="Close" data-id="Tutup">Tutup</button>
+        <a id="modalLink" class="button" href="https://github.com/apuyyyy" target="_blank" rel="noopener noreferrer">
+          <span data-en="View Repository" data-id="Lihat Repositori">Lihat Repositori</span>
+          <span class="button-arrow" aria-hidden="true">↗</span>
+        </a>
+      </div>
+    </div>
+  </div>
+
+  <!-- ==================== SCRIPTS ==================== -->
+  <script>
+    // Theme toggle
+    const themeButton = document.getElementById('theme-toggle');
+    const themeColor = document.querySelector('meta[name="theme-color"]');
+    function syncThemeLabel() {
+      const isDark = document.documentElement.dataset.theme === 'dark';
+      const label = currentLanguage === 'id'
+        ? (isDark ? 'Ganti ke mode terang' : 'Ganti ke mode gelap')
+        : (isDark ? 'Switch to light mode' : 'Switch to dark mode');
+      themeButton.setAttribute('aria-label', label);
+      themeButton.title = label;
+      themeColor.content = isDark ? '#111815' : '#f3f0e8';
+    }
+
+    // Language switch
+    const languageButtons = document.querySelectorAll('[data-lang]');
+    let currentLanguage = 'id';
+    function setLanguage(language) {
+      currentLanguage = language;
+      document.documentElement.lang = language;
+      document.querySelectorAll('[data-en][data-id]').forEach((element) => {
+        element.textContent = element.dataset[language];
+      });
+      document.querySelectorAll('[data-en-placeholder][data-id-placeholder]').forEach((element) => {
+        element.placeholder = language === 'id' ? element.dataset.idPlaceholder : element.dataset.enPlaceholder;
+      });
+      document.querySelectorAll('[data-en-alt][data-id-alt]').forEach((element) => {
+        element.alt = language === 'id' ? element.dataset.idAlt : element.dataset.enAlt;
+      });
+      document.querySelectorAll('[data-en-aria][data-id-aria]').forEach((element) => {
+        element.setAttribute('aria-label', language === 'id' ? element.dataset.idAria : element.dataset.enAria);
+      });
+      document.title = language === 'id' 
+        ? 'Jimmy Fernando — Fullstack Developer & Sistem Informasi' 
+        : 'Jimmy Fernando — Fullstack Developer & Information Systems';
+      document.querySelector('meta[name="description"]').content = language === 'id'
+        ? 'Jimmy Fernando — Mahasiswa Sistem Informasi & Fullstack Developer dari Jakarta, Indonesia.'
+        : 'Jimmy Fernando — Fullstack Developer & Information Systems graduate from Jakarta, Indonesia.';
+      languageButtons.forEach((button) => button.setAttribute('aria-pressed', String(button.dataset.lang === language)));
+      syncThemeLabel();
+      try { localStorage.setItem('portfolio-language', language); } catch (_) {}
+    }
+
+    languageButtons.forEach((button) => button.addEventListener('click', () => setLanguage(button.dataset.lang)));
+    try {
+      const savedLanguage = localStorage.getItem('portfolio-language');
+      if (savedLanguage === 'id' || savedLanguage === 'en') setLanguage(savedLanguage);
+    } catch (_) {}
+
+    syncThemeLabel();
+    themeButton.addEventListener('click', () => {
+      document.documentElement.dataset.theme = document.documentElement.dataset.theme === 'dark' ? 'light' : 'dark';
+      syncThemeLabel();
+      try { localStorage.setItem('portfolio-theme', document.documentElement.dataset.theme); } catch (_) {}
+    });
+
+    // Reading progress bar
+    document.getElementById('year').textContent = new Date().getFullYear();
+    const progressBar = document.getElementById('progress-bar');
+    function updateProgress() {
+      const available = document.documentElement.scrollHeight - window.innerHeight;
+      const progress = available > 0 ? Math.min(100, Math.max(0, window.scrollY / available * 100)) : 0;
+      progressBar.style.width = progress + '%';
+    }
+    window.addEventListener('scroll', updateProgress, { passive: true });
+    window.addEventListener('resize', updateProgress, { passive: true });
+    updateProgress();
+
+    // Scroll reveal
+    const revealItems = document.querySelectorAll('.reveal');
+    if ('IntersectionObserver' in window && !window.matchMedia('(prefers-reduced-motion: reduce)').matches) {
+      const revealObserver = new IntersectionObserver((entries, observer) => {
+        entries.forEach((entry) => {
+          if (entry.isIntersecting) {
+            entry.target.classList.add('is-visible');
+            observer.unobserve(entry.target);
+          }
         });
+      }, { threshold: .12, rootMargin: '0px 0px -30px 0px' });
+      revealItems.forEach((item) => revealObserver.observe(item));
+    } else {
+      revealItems.forEach((item) => item.classList.add('is-visible'));
+    }
 
-        function closeMenu() {
-            menuOpen = false;
-            menuBtn.classList.remove('menu-open');
-            mobileMenu.classList.add('opacity-0', 'pointer-events-none');
-            mobileMenu.classList.remove('opacity-100');
-            document.body.style.overflow = '';
-        }
+    // Active nav tracking
+    const navLinks = [...document.querySelectorAll('.nav a')];
+    const sections = navLinks.map((link) => document.querySelector(link.getAttribute('href'))).filter(Boolean);
+    function updateActiveNav() {
+      const readingLine = window.innerHeight * .42;
+      const activeSection = sections.find((section) => {
+        const bounds = section.getBoundingClientRect();
+        return bounds.top <= readingLine && bounds.bottom >= readingLine;
+      });
+      navLinks.forEach((link) => {
+        const isActive = activeSection && link.getAttribute('href') === '#' + activeSection.id;
+        if (isActive) link.setAttribute('aria-current', 'location');
+        else link.removeAttribute('aria-current');
+      });
+    }
+    window.addEventListener('scroll', updateActiveNav, { passive: true });
+    window.addEventListener('resize', updateActiveNav, { passive: true });
+    updateActiveNav();
 
-        document.querySelectorAll('.mobile-nav').forEach(link => {
-            link.addEventListener('click', closeMenu);
-        });
+    // Contact form mailto integration
+    document.getElementById('contact-form').addEventListener('submit', (event) => {
+      event.preventDefault();
+      const form = event.currentTarget;
+      const name = form.elements.name.value.trim();
+      const email = form.elements.email.value.trim();
+      const message = form.elements.message.value.trim();
+      const subject = encodeURIComponent('Portofolio Inquiry dari ' + name);
+      const body = encodeURIComponent('Nama: ' + name + '\nEmail: ' + email + '\n\nPesan:\n' + message);
+      document.getElementById('form-status').textContent = currentLanguage === 'id' 
+        ? 'Draf email sedang disiapkan…' 
+        : 'Preparing your email draft…';
+      window.location.href = 'mailto:jimmyfrnn12@gmail.com?subject=' + subject + '&body=' + body;
+    });
 
-        // ===== Navbar Scroll Effect =====
-        const navbar = document.getElementById('navbar');
-        let lastScroll = 0;
+    // Project modal data
+    const projectDatabase = {
+      1: {
+        title_id: "Sistem Quality Control Klaim Produk Rusak",
+        title_en: "Quality Control Defect Claim System",
+        cat: "FULLSTACK WEB APPLICATION",
+        desc_id: "Sistem web penanganan klaim produk end-to-end yang diimplementasikan pada PT. Metinca Prima Industrial Works. Mencakup portal publik untuk pengajuan komplain pelanggan hingga modul investigasi tim internal guna mempercepat penyelesaian retur barang.",
+        desc_en: "An end-to-end web-based defect claim resolution platform implemented for PT Metinca Prima Industrial Works, covering customer ticket submissions to internal investigation workflows.",
+        features_id: [
+          "Portal komplain terpadu dengan formulir pengisian ringkas dan antarmuka responsif",
+          "Fitur unggah bukti digital (foto kerusakan, batch produksi) dengan kategorisasi jenis cacat produk",
+          "Dasbor pemantauan status tiket QC menggunakan framework Laravel untuk transparansi SLA penyelesaian",
+          "Desain arsitektur basis data relasional MySQL untuk histori keluhan, status audit kerusakan, dan pelaporan berkala"
+        ],
+        features_en: [
+          "Integrated complaint portal with concise form flows and intuitive mobile-friendly UI",
+          "Digital proof upload (defect photos, batch numbers) with automated defect categorization",
+          "QC ticket management dashboard built in Laravel to transparently monitor return SLAs",
+          "Relational MySQL database schema recording defect histories, audit statuses, and executive reports"
+        ],
+        tech: ["Laravel", "PHP", "MySQL", "Tailwind CSS", "JavaScript", "Blade"],
+        link: "https://github.com/apuyyyy"
+      },
+      2: {
+        title_id: "UI/UX Mobile Application & Design System",
+        title_en: "Mobile App UI/UX Design System",
+        cat: "MOBILE DESIGN & PROTOTYPING",
+        desc_id: "Perancangan tata letak dan pengalaman pengguna aplikasi mobile secara komprehensif menggunakan Figma. Berorientasi pada kemudahan navigasi dan kepuasan interaksi pengguna.",
+        desc_en: "Comprehensive mobile interface design and user experience architecture created in Figma, focused on intuitive navigation and user interaction satisfaction.",
+        features_id: [
+          "Penyusunan kerangka desain beresolusi tinggi (high-fidelity wireframes)",
+          "Pembuatan prototipe interaktif untuk mensimulasikan uji coba pengalaman pengguna nyata",
+          "Desain komponen antarmuka atomik: tombol, ikon, formulir, dan tipografi terstandarisasi",
+          "Penerapan animasi mikro dan transisi dinamis ke elemen interaktif"
+        ],
+        features_en: [
+          "High-fidelity wireframe structures with structured visual hierarchies",
+          "Interactive prototyping simulating realistic user journeys and flows",
+          "Standardized atomic design system components: buttons, icon sets, inputs",
+          "Implementation of micro-interactions and smooth transitional screen states"
+        ],
+        tech: ["Figma", "UI/UX", "Wireframing", "Prototyping", "Design System"],
+        link: "https://github.com/apuyyyy"
+      },
+      3: {
+        title_id: "Modernisasi & Redesign Website Perusahaan",
+        title_en: "Corporate Website Redesign",
+        cat: "CMS & FRONT-END DEVELOPMENT",
+        desc_id: "Merombak total antarmuka web perusahaan PT. Rezeki Utami Sejahtera menjadi tampilan modern dan segar menggunakan platform WordPress.",
+        desc_en: "Full front-end overhaul of PT Rezeki Utami Sejahtera's company website, transforming it into a fresh, contemporary web presence with WordPress.",
+        features_id: [
+          "Transformasi visual antarmuka pengguna (UI) lama menjadi desain kontemporer",
+          "Implementasi tata letak responsif penuh pada platform WordPress",
+          "Penyusunan log kemajuan berkala untuk laporan pimpinan perusahaan",
+          "Mempresentasikan hasil rancangan antarmuka pengguna di hadapan manajemen"
+        ],
+        features_en: [
+          "Complete UI transformation from legacy layout to contemporary branding",
+          "Fully responsive layout implementation on WordPress CMS",
+          "Structured milestone reporting for executive management updates",
+          "Live presentations of design mockups to company leadership"
+        ],
+        tech: ["WordPress", "HTML5", "CSS3", "JavaScript", "CMS"],
+        link: "https://github.com/apuyyyy"
+      },
+      4: {
+        title_id: "Produksi & Penyuntingan Video Kreatif",
+        title_en: "Creative Short Video Production",
+        cat: "MULTIMEDIA & AUDIO SUITE",
+        desc_id: "Produksi dan pascaproduksi video kreatif berdurasi pendek untuk kebutuhan engagement audiens digital menggunakan CapCut.",
+        desc_en: "Creative short-form video editing and post-production tailored for social media engagement using CapCut.",
+        features_id: [
+          "Pemangkasan selektif klip mentah untuk mempertahankan momen terbaik",
+          "Penyelarasan audio multi-track: peredam noise latar dan penyeimbangan volume musik",
+          "Transisi sinematik halus antar adegan untuk alur cerita yang berkesinambungan",
+          "Integrasi tipografi judul, efek gerak, dan subtitle dinamis"
+        ],
+        features_en: [
+          "Selective footage trimming to capture high-impact highlights",
+          "Multi-track audio equalization, noise reduction, and background scoring",
+          "Seamless cinematic transitions maintaining narrative pacing",
+          "Motion typography, animated lower thirds, and synchronized captions"
+        ],
+        tech: ["CapCut", "Audio Mixing", "Motion Typography", "Color Grading"],
+        link: "https://github.com/apuyyyy"
+      },
+      5: {
+        title_id: "Game Livestreaming & Manajemen Komunitas",
+        title_en: "Game Livestreaming & Community Building",
+        cat: "BROADCASTING & ENGAGEMENT",
+        desc_id: "Penyiaran langsung (livestreaming) interaktif di TikTok Live Studio pada platform Roblox untuk membangun interaksi dan retensi penonton secara konsisten.",
+        desc_en: "Interactive live streaming on TikTok Live Studio within Roblox ecosystem, fostering viewer retention and active community dialogue.",
+        features_id: [
+          "Produksi sesi siaran langsung dengan interaksi aktif di live chat",
+          "Penguasaan software broadcasting TikTok Live Studio untuk audio dan visual yang jernih",
+          "Penyusunan konten kreatif gameplay yang dinamis",
+          "Manajemen retensi penonton selama sesi siaran berlangsung"
+        ],
+        features_en: [
+          "Active live streaming production with real-time viewer chat interactions",
+          "Broadcasting software configuration for optimal bitrate, audio, and visual clarity",
+          "Dynamic creative gameplay direction appealing to young demographics",
+          "Audience retention strategies during extended stream sessions"
+        ],
+        tech: ["TikTok Live Studio", "Roblox", "Broadcasting", "Audience Engagement"],
+        link: "https://github.com/apuyyyy"
+      },
+      6: {
+        title_id: "Perdagangan Komoditas Digital & Layanan Pelanggan",
+        title_en: "Digital Asset Commerce & CRM",
+        cat: "VIRTUAL MARKETPLACE & CRM",
+        desc_id: "Pengelolaan aktivitas jual beli komoditas digital game Roblox di marketplace Itemku dan Facebook dengan menitikberatkan pada kecepatan respon dan kepercayaan konsumen.",
+        desc_en: "Digital gaming commodity trading across Itemku and Facebook, emphasizing responsive communication and trusted order fulfillment.",
+        features_id: [
+          "Transaksi jual beli item game dengan tingkat kepuasan tinggi",
+          "Komunikasi langsung yang transparan dengan konsumen sepanjang alur pembelian",
+          "Manajemen kepuasan pelanggan dan reputasi toko virtual",
+          "Penyelesaian pesanan tepat waktu dan aman"
+        ],
+        features_en: [
+          "Virtual asset trading operations with high customer satisfaction rates",
+          "Transparent direct client communications from inquiry to delivery",
+          "Store reputation management and dispute prevention",
+          "Punctual and secure digital order fulfillment"
+        ],
+        tech: ["Itemku", "Facebook Marketplace", "CRM", "E-Commerce"],
+        link: "https://github.com/apuyyyy"
+      }
+    };
 
-        window.addEventListener('scroll', () => {
-            const currentScroll = window.scrollY;
+    const modal = document.getElementById('projectModal');
+    function openModal(id) {
+      const data = projectDatabase[id];
+      if (!data) return;
+      document.getElementById('modalCategory').textContent = data.cat;
+      document.getElementById('modalTitle').textContent = currentLanguage === 'id' ? data.title_id : data.title_en;
+      document.getElementById('modalDesc').textContent = currentLanguage === 'id' ? data.desc_id : data.desc_en;
+      
+      const features = currentLanguage === 'id' ? data.features_id : data.features_en;
+      document.getElementById('modalFeatures').innerHTML = features.map(f => `<li>${f}</li>`).join('');
+      document.getElementById('modalTech').innerHTML = data.tech.map(t => `<span class="tag">${t}</span>`).join('');
+      document.getElementById('modalLink').href = data.link;
 
-            if (currentScroll > 50) {
-                navbar.classList.add('glass', 'shadow-lg');
-                navbar.style.padding = '0';
-            } else {
-                navbar.classList.remove('glass', 'shadow-lg');
-                navbar.style.padding = '';
-            }
+      modal.classList.add('is-open');
+      document.body.style.overflow = 'hidden';
+    }
 
-            lastScroll = currentScroll;
-        });
+    function closeModal(event) {
+      if (event && event.target !== modal && !event.target.classList.contains('modal-close') && !event.target.closest('.modal-close') && !event.target.classList.contains('button-secondary')) return;
+      modal.classList.remove('is-open');
+      document.body.style.overflow = '';
+    }
 
-        // ===== Active Nav Link =====
-        const sections = document.querySelectorAll('section[id]');
-        const navLinks = document.querySelectorAll('.nav-link');
-
-        window.addEventListener('scroll', () => {
-            let current = '';
-            sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                if (window.scrollY >= sectionTop) {
-                    current = section.getAttribute('id');
-                }
-            });
-
-            navLinks.forEach(link => {
-                link.classList.remove('active', 'text-primary-600', 'dark:text-primary-400');
-                if (link.getAttribute('href') === '#' + current) {
-                    link.classList.add('active', 'text-primary-600', 'dark:text-primary-400');
-                }
-            });
-        });
-
-        // ===== Scroll Animations (Intersection Observer) =====
-        const observerOptions = {
-            root: null,
-            rootMargin: '0px 0px -80px 0px',
-            threshold: 0.1,
-        };
-
-        const observer = new IntersectionObserver((entries) => {
-            entries.forEach((entry, index) => {
-                if (entry.isIntersecting) {
-                    // Stagger delay
-                    const delay = entry.target.dataset.delay || 0;
-                    setTimeout(() => {
-                        entry.target.classList.add('visible');
-                    }, delay * 100);
-                    observer.unobserve(entry.target);
-                }
-            });
-        }, observerOptions);
-
-        document.querySelectorAll('.animate-on-scroll').forEach((el, index) => {
-            el.dataset.delay = index % 4;
-            observer.observe(el);
-        });
-
-        // ===== Back to Top =====
-        const backToTop = document.getElementById('backToTop');
-
-        window.addEventListener('scroll', () => {
-            if (window.scrollY > 500) {
-                backToTop.classList.remove('opacity-0', 'pointer-events-none');
-                backToTop.classList.add('opacity-100');
-            } else {
-                backToTop.classList.add('opacity-0', 'pointer-events-none');
-                backToTop.classList.remove('opacity-100');
-            }
-        });
-
-        backToTop.addEventListener('click', () => {
-            window.scrollTo({ top: 0, behavior: 'smooth' });
-        });
-
-        // ===== Contact Form =====
-        document.getElementById('contactForm').addEventListener('submit', (e) => {
-            e.preventDefault();
-            const btn = e.target.querySelector('button[type="submit"]');
-            const originalText = btn.innerHTML;
-            btn.innerHTML = '<i class="fas fa-check mr-2"></i> Pesan Terkirim!';
-            btn.classList.add('from-green-500', 'to-emerald-500');
-            setTimeout(() => {
-                btn.innerHTML = originalText;
-                btn.classList.remove('from-green-500', 'to-emerald-500');
-                e.target.reset();
-            }, 3000);
-        });
-
-        // ===== Hero Particles =====
-        const particlesContainer = document.getElementById('particles');
-        for (let i = 0; i < 20; i++) {
-            const particle = document.createElement('div');
-            particle.classList.add('particle');
-            const size = Math.random() * 6 + 2;
-            particle.style.width = size + 'px';
-            particle.style.height = size + 'px';
-            particle.style.left = Math.random() * 100 + '%';
-            particle.style.top = Math.random() * 100 + '%';
-            particle.style.background = `rgba(99, 102, 241, ${Math.random() * 0.3 + 0.1})`;
-            particle.style.animationDelay = Math.random() * 6 + 's';
-            particle.style.animationDuration = (Math.random() * 4 + 4) + 's';
-            particlesContainer.appendChild(particle);
-        }
-
-        // ===== Typing Effect for Hero =====
-        const roles = ['Fullstack Developer', 'UI/UX Enthusiast', 'Web Developer', 'Problem Solver'];
-        let roleIndex = 0;
-        let charIndex = 0;
-        let isDeleting = false;
-        const typingEl = document.querySelector('.typing-text');
-
-        function typeRole() {
-            if (!typingEl) return;
-            const current = roles[roleIndex];
-            if (isDeleting) {
-                typingEl.textContent = current.substring(0, charIndex - 1);
-                charIndex--;
-            } else {
-                typingEl.textContent = current.substring(0, charIndex + 1);
-                charIndex++;
-            }
-
-            if (!isDeleting && charIndex === current.length) {
-                setTimeout(() => isDeleting = true, 2000);
-            } else if (isDeleting && charIndex === 0) {
-                isDeleting = false;
-                roleIndex = (roleIndex + 1) % roles.length;
-            }
-
-            setTimeout(typeRole, isDeleting ? 45 : 90);
-        }
-        setTimeout(typeRole, 400);
-
-        // ===== Smooth scroll for all anchor links =====
-        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
-            anchor.addEventListener('click', function (e) {
-                e.preventDefault();
-                const target = document.querySelector(this.getAttribute('href'));
-                if (target) {
-                    target.scrollIntoView({ behavior: 'smooth', block: 'start' });
-                }
-            });
-        });
-
-        // ===== Counter Animation for Stats =====
-        let counted = false;
-        function animateCounters() {
-            if (counted) return;
-            counted = true;
-            document.querySelectorAll('[data-count]').forEach(counter => {
-                const target = parseFloat(counter.dataset.count);
-                const duration = 2000;
-                const start = performance.now();
-                const isDecimal = target % 1 !== 0;
-
-                function update(currentTime) {
-                    const elapsed = currentTime - start;
-                    const progress = Math.min(elapsed / duration, 1);
-                    const eased = 1 - Math.pow(1 - progress, 3);
-                    const current = eased * target;
-                    counter.textContent = isDecimal ? current.toFixed(2) : Math.floor(current) + '+';
-                    if (progress < 1) requestAnimationFrame(update);
-                }
-                requestAnimationFrame(update);
-            });
-        }
-
-        const statsSection = document.getElementById('statsContainer');
-        if (statsSection) {
-            const statsObserver = new IntersectionObserver((entries) => {
-                if (entries[0].isIntersecting) {
-                    animateCounters();
-                    statsObserver.unobserve(statsSection);
-                }
-            }, { threshold: 0.2 });
-            statsObserver.observe(statsSection);
-        }
-
-        // ===== Project Details Data & Modal =====
-        const projectData = {
-            1: {
-                title: "Sistem Quality Control Klaim Produk",
-                category: "Fullstack Web Application",
-                org: "PT. Metinca Prima Industrial Works (Final Project)",
-                desc: "Sistem manajemen penanganan klaim produk rusak secara komprehensif dan end-to-end. Memfasilitasi portal pengajuan tiket oleh pelanggan hingga modul investigasi tim internal untuk mempercepat resolusi dan akurasi komplain.",
-                features: [
-                    "Portal komplain terpadu dilengkapi formulir ringkas dan intuitif",
-                    "Fitur unggah bukti digital (foto kerusakan, batch produksi) dengan validasi berkas terpusat",
-                    "Otomatisasi pengelompokan jenis cacat produk guna memangkas durasi audit Staff QC",
-                    "Dashboard pemantauan tiket QC berbasis SLA secara real-time dan transparan",
-                    "Perancangan arsitektur basis data relasional MySQL untuk histori keluhan dan laporan manajemen"
-                ],
-                tech: ["Laravel", "PHP", "MySQL", "Tailwind CSS", "JavaScript", "Blade Engine"],
-                link: "https://github.com/jimmyfernando"
-            },
-            2: {
-                title: "UI/UX Mobile Application & Design System",
-                category: "Mobile Design & Prototyping",
-                org: "Self Project · Figma",
-                desc: "Perancangan pengalaman pengguna (UX) dan antarmuka visual (UI) aplikasi mobile mulai dari sketsa alur pengguna, wireframing resolusi tinggi, hingga prototipe interaktif realistis.",
-                features: [
-                    "Penyusunan kerangka desain (wireframe high-fidelity) dengan tata letak proporsional",
-                    "Pembuatan komponen UI atomik terstandarisasi (tombol, formulir, icon pack, navigasi)",
-                    "Prototipe interaktif untuk mensimulasikan uji coba pengalaman pengguna",
-                    "Penerapan animasi mikro dan transisi halus antar-layar"
-                ],
-                tech: ["Figma", "UI/UX Design", "Wireframing", "Interactive Prototyping", "Design System"],
-                link: "https://www.figma.com"
-            },
-            3: {
-                title: "Redesign & Modernisasi Website Perusahaan",
-                category: "Front-End & CMS Development",
-                org: "PT. Rezeki Utami Sejahtera (Internship)",
-                desc: "Pembaruan menyeluruh terhadap antarmuka dan pengalaman pengguna situs web perusahaan guna meningkatkan kredibilitas brand, estetika modern, dan kenyamanan navigasi klien.",
-                features: [
-                    "Merombak antarmuka pengguna (UI) lama menjadi tampilan segar, elegan, dan profesional",
-                    "Implementasi desain responsif pada CMS WordPress untuk semua resolusi layar",
-                    "Penyusunan log kemajuan pengembangan berkala untuk laporan manajemen",
-                    "Presentasi langsung konsep UI/UX di hadapan stakeholder perusahaan"
-                ],
-                tech: ["WordPress", "HTML5", "CSS3", "JavaScript", "UI/UX Design", "Responsive Layout"],
-                link: "https://github.com/jimmyfernando"
-            },
-            4: {
-                title: "Short Video Creative Production",
-                category: "Multimedia & Video Editing",
-                org: "Self Project · CapCut",
-                desc: "Produksi konten video kreatif berdurasi pendek dengan optimasi engagement tinggi pada platform digital melalui editing visual dan audio yang terstruktur.",
-                features: [
-                    "Pemangkasan selektif footage mentah guna mempertahankan momen kunci terbaik",
-                    "Penyelarasan audio multi-track: eliminasi noise, penyeimbangan volume, dan backsound",
-                    "Transisi dinamis dan sinematik yang menghubungkan alur cerita secara mulus",
-                    "Integrasi motion graphics, tipografi judul, dan caption otomatis"
-                ],
-                tech: ["CapCut", "Audio Mixing", "Motion Typography", "Color Grading", "Content Strategy"],
-                link: "https://github.com/jimmyfernando"
-            },
-            5: {
-                title: "Game Livestreaming & Community Building",
-                category: "Live Broadcasting",
-                org: "Self Project · TikTok Live Studio",
-                desc: "Aktivitas penyiaran langsung (livestreaming) interaktif di ekosistem game Roblox untuk membangun audiens aktif serta mempertahankan retensi penonton secara konsisten.",
-                features: [
-                    "Streaming real-time interaktif dengan engagement audiens yang aktif",
-                    "Pengaturan software broadcasting (TikTok Live Studio) untuk performa video dan audio terbaik",
-                    "Kreativitas gameplay dinamis yang mampu menarik minat penonton baru",
-                    "Interaksi komunikatif secara langsung merespons obrolan live chat"
-                ],
-                tech: ["TikTok Live Studio", "Roblox", "Broadcasting", "Audience Engagement", "Streaming"],
-                link: "https://github.com/jimmyfernando"
-            },
-            6: {
-                title: "Digital Commerce & Customer Relations",
-                category: "Virtual Marketplace",
-                org: "Self Project · Facebook / Itemku",
-                desc: "Pengelolaan aktivitas jual beli komoditas virtual dalam platform marketplace khusus gaming dengan mengedepankan kecepatan respon dan kepercayaan konsumen.",
-                features: [
-                    "Pengelolaan transaksi pembelian dan penjualan item Roblox bernilai ekonomi",
-                    "Komunikasi langsung yang transparan dan informatif kepada setiap pelanggan",
-                    "Manajemen reputasi toko digital dengan penyelesaian pesanan tepat waktu",
-                    "Analisis tren harga dan permintaan pasar item digital"
-                ],
-                tech: ["Itemku", "Facebook Marketplace", "CRM", "E-Commerce", "Digital Assets"],
-                link: "https://github.com/jimmyfernando"
-            }
-        };
-
-        const modal = document.getElementById('projectModal');
-        const modalTitle = document.getElementById('modalTitle');
-        const modalCategory = document.getElementById('modalCategory');
-        const modalOrg = document.getElementById('modalOrg');
-        const modalDesc = document.getElementById('modalDesc');
-        const modalFeatures = document.getElementById('modalFeatures');
-        const modalTech = document.getElementById('modalTech');
-        const modalLink = document.getElementById('modalLink');
-
-        function openModal(id) {
-            const data = projectData[id];
-            if (!data) return;
-
-            modalTitle.textContent = data.title;
-            modalCategory.textContent = data.category;
-            modalOrg.textContent = data.org;
-            modalDesc.textContent = data.desc;
-            modalLink.href = data.link;
-
-            // Features list
-            modalFeatures.innerHTML = data.features.map(f => `
-                <li class="flex items-start gap-2.5">
-                    <i class="fas fa-check-circle text-primary-500 mt-1 shrink-0"></i>
-                    <span>${f}</span>
-                </li>
-            `).join('');
-
-            // Tech badges
-            modalTech.innerHTML = data.tech.map(t => `
-                <span class="px-2.5 py-1 rounded-md bg-primary-50 dark:bg-primary-950/50 text-primary-600 dark:text-primary-400 text-xs font-semibold border border-primary-200 dark:border-primary-800">${t}</span>
-            `).join('');
-
-            modal.classList.remove('opacity-0', 'pointer-events-none');
-            modal.classList.add('opacity-100');
-            modal.querySelector('.transform').classList.remove('scale-95');
-            modal.querySelector('.transform').classList.add('scale-100');
-            document.body.style.overflow = 'hidden';
-        }
-
-        function closeModal() {
-            modal.classList.add('opacity-0', 'pointer-events-none');
-            modal.classList.remove('opacity-100');
-            modal.querySelector('.transform').classList.add('scale-95');
-            modal.querySelector('.transform').classList.remove('scale-100');
-            document.body.style.overflow = '';
-        }
-
-        window.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') closeModal();
-        });
-    </script>
+    window.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape' && modal.classList.contains('is-open')) {
+        modal.classList.remove('is-open');
+        document.body.style.overflow = '';
+      }
+    });
+  </script>
 </body>
 </html>
