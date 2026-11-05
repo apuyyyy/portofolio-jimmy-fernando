@@ -218,7 +218,7 @@
                         <span class="gradient-text">Jimmy Fernando</span>
                     </h1>
                     <p class="text-lg sm:text-xl text-gray-600 dark:text-gray-400 mb-3 animate-slide-up font-medium" style="animation-delay: 0.2s;">
-                        Fullstack Developer & UI/UX Enthusiast
+                        Saya seorang <span class="typing-text gradient-text font-bold"></span><span class="typing-cursor font-bold text-primary-500"></span>
                     </p>
                     <p class="text-base text-gray-500 dark:text-gray-500 mb-8 max-w-lg mx-auto md:mx-0 animate-slide-up leading-relaxed" style="animation-delay: 0.3s;">
                         Membangun solusi digital yang berdampak — dari arsitektur backend yang solid hingga antarmuka pengguna yang intuitif. Siap membawa ide Anda menjadi kenyataan.
@@ -228,7 +228,7 @@
                             <i class="fas fa-paper-plane group-hover:translate-x-1 group-hover:-translate-y-1 transition-transform duration-300"></i>
                             Hubungi Saya
                         </a>
-                        <a href="#" class="group inline-flex items-center gap-2 px-7 py-3.5 bg-white dark:bg-dark-card border-2 border-gray-200 dark:border-dark-border text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:border-primary-400 dark:hover:border-primary-500 transition-all duration-300 hover:scale-105">
+                        <a href="CV_Jimmy_Fernando.pdf" download="CV_Jimmy_Fernando.pdf" class="group inline-flex items-center gap-2 px-7 py-3.5 bg-white dark:bg-dark-card border-2 border-gray-200 dark:border-dark-border text-gray-700 dark:text-gray-300 font-semibold rounded-xl hover:border-primary-400 dark:hover:border-primary-500 transition-all duration-300 hover:scale-105">
                             <i class="fas fa-download group-hover:animate-bounce"></i>
                             Unduh CV
                         </a>
@@ -250,23 +250,24 @@
                 <!-- Avatar / Visual -->
                 <div class="order-1 md:order-2 flex justify-center animate-scale-in" style="animation-delay: 0.3s;">
                     <div class="relative">
-                        <div class="w-64 h-64 sm:w-80 sm:h-80 rounded-full gradient-bg p-1 shadow-2xl shadow-primary-500/20">
-                            <div class="w-full h-full rounded-full bg-gray-100 dark:bg-dark-card flex items-center justify-center overflow-hidden">
-                                <div class="text-center">
+                        <div class="w-64 h-64 sm:w-80 sm:h-80 rounded-full gradient-bg p-1.5 shadow-2xl shadow-primary-500/30 ring-4 ring-primary-400/20">
+                            <div class="w-full h-full rounded-full bg-gray-100 dark:bg-dark-card flex items-center justify-center overflow-hidden relative">
+                                <img src="profile.png" alt="Jimmy Fernando" class="w-full h-full object-cover object-top hover:scale-105 transition-transform duration-500" onerror="this.style.display='none'; this.nextElementSibling.style.display='block';">
+                                <div class="hidden text-center">
                                     <div class="text-7xl sm:text-8xl font-display font-bold gradient-text">JF</div>
                                     <p class="text-sm text-gray-400 mt-2 font-medium">Developer</p>
                                 </div>
                             </div>
                         </div>
                         <!-- Floating Badges -->
-                        <div class="absolute -top-4 -right-4 px-4 py-2 glass rounded-xl shadow-lg animate-float text-sm font-semibold text-gray-700 dark:text-gray-300">
-                            <i class="fab fa-laravel text-red-500 mr-1"></i> Laravel
+                        <div class="absolute -top-3 -right-3 px-4 py-2 glass rounded-xl shadow-lg animate-float text-sm font-semibold text-gray-700 dark:text-gray-300">
+                            <i class="fab fa-laravel text-red-500 mr-1.5"></i> Laravel
                         </div>
-                        <div class="absolute -bottom-4 -left-4 px-4 py-2 glass rounded-xl shadow-lg animate-float text-sm font-semibold text-gray-700 dark:text-gray-300" style="animation-delay: -2s;">
-                            <i class="fab fa-figma text-purple-500 mr-1"></i> Figma
+                        <div class="absolute -bottom-3 -left-3 px-4 py-2 glass rounded-xl shadow-lg animate-float text-sm font-semibold text-gray-700 dark:text-gray-300" style="animation-delay: -2s;">
+                            <i class="fab fa-figma text-purple-500 mr-1.5"></i> Figma
                         </div>
-                        <div class="absolute top-1/2 -right-8 px-4 py-2 glass rounded-xl shadow-lg animate-float text-sm font-semibold text-gray-700 dark:text-gray-300" style="animation-delay: -4s;">
-                            <i class="fas fa-database text-blue-500 mr-1"></i> MySQL
+                        <div class="absolute top-1/2 -right-6 px-4 py-2 glass rounded-xl shadow-lg animate-float text-sm font-semibold text-gray-700 dark:text-gray-300" style="animation-delay: -4s;">
+                            <i class="fas fa-database text-blue-500 mr-1.5"></i> MySQL
                         </div>
                     </div>
                 </div>
@@ -294,22 +295,22 @@
 
             <div class="grid md:grid-cols-5 gap-12 items-center">
                 <!-- Stats Cards -->
-                <div class="md:col-span-2 grid grid-cols-2 gap-4 animate-on-scroll from-left">
+                <div class="md:col-span-2 grid grid-cols-2 gap-4 animate-on-scroll from-left" id="statsContainer">
                     <div class="glass rounded-2xl p-6 text-center card-hover">
-                        <div class="text-3xl font-display font-bold gradient-text mb-1">3+</div>
+                        <div class="text-3xl font-display font-bold gradient-text mb-1" data-count="3">3+</div>
                         <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">Pengalaman Kerja</p>
                     </div>
                     <div class="glass rounded-2xl p-6 text-center card-hover">
-                        <div class="text-3xl font-display font-bold gradient-text mb-1">5+</div>
+                        <div class="text-3xl font-display font-bold gradient-text mb-1" data-count="5">5+</div>
                         <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">Proyek Selesai</p>
                     </div>
                     <div class="glass rounded-2xl p-6 text-center card-hover">
-                        <div class="text-3xl font-display font-bold gradient-text mb-1">3.58</div>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">IPK</p>
+                        <div class="text-3xl font-display font-bold gradient-text mb-1" data-count="3.58">3.58</div>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">IPK Akademik</p>
                     </div>
                     <div class="glass rounded-2xl p-6 text-center card-hover">
-                        <div class="text-3xl font-display font-bold gradient-text mb-1">4+</div>
-                        <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">Sertifikasi</p>
+                        <div class="text-3xl font-display font-bold gradient-text mb-1" data-count="4">4+</div>
+                        <p class="text-sm text-gray-500 dark:text-gray-400 font-medium">Sertifikasi IT</p>
                     </div>
                 </div>
 
@@ -463,8 +464,8 @@
                                 <span class="skill-tag px-2.5 py-1 rounded-md bg-yellow-50 dark:bg-yellow-950/40 text-yellow-600 dark:text-yellow-400 text-xs font-medium">JavaScript</span>
                             </div>
                             <div class="flex gap-3">
-                                <a href="#" class="flex-1 text-center px-4 py-2 rounded-lg bg-primary-50 dark:bg-primary-950/50 text-primary-600 dark:text-primary-400 text-sm font-medium hover:bg-primary-100 dark:hover:bg-primary-900/50 transition-colors"><i class="fas fa-external-link-alt mr-1.5"></i>Demo</a>
-                                <a href="#" class="flex-1 text-center px-4 py-2 rounded-lg bg-gray-100 dark:bg-dark-card text-gray-600 dark:text-gray-400 text-sm font-medium hover:bg-gray-200 dark:hover:bg-dark-border transition-colors"><i class="fab fa-github mr-1.5"></i>Code</a>
+                                <button onclick="openModal(1)" class="flex-1 text-center px-4 py-2 rounded-lg bg-primary-50 dark:bg-primary-950/50 text-primary-600 dark:text-primary-400 text-sm font-medium hover:bg-primary-100 dark:hover:bg-primary-900/50 transition-colors"><i class="fas fa-info-circle mr-1.5"></i>Detail Proyek</button>
+                                <a href="https://github.com/jimmyfernando" target="_blank" class="flex-1 text-center px-4 py-2 rounded-lg bg-gray-100 dark:bg-dark-card text-gray-600 dark:text-gray-400 text-sm font-medium hover:bg-gray-200 dark:hover:bg-dark-border transition-colors"><i class="fab fa-github mr-1.5"></i>GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -488,8 +489,8 @@
                                 <span class="skill-tag px-2.5 py-1 rounded-md bg-indigo-50 dark:bg-indigo-950/40 text-indigo-600 dark:text-indigo-400 text-xs font-medium">UI/UX</span>
                             </div>
                             <div class="flex gap-3">
-                                <a href="#" class="flex-1 text-center px-4 py-2 rounded-lg bg-primary-50 dark:bg-primary-950/50 text-primary-600 dark:text-primary-400 text-sm font-medium hover:bg-primary-100 dark:hover:bg-primary-900/50 transition-colors"><i class="fas fa-external-link-alt mr-1.5"></i>Preview</a>
-                                <a href="#" class="flex-1 text-center px-4 py-2 rounded-lg bg-gray-100 dark:bg-dark-card text-gray-600 dark:text-gray-400 text-sm font-medium hover:bg-gray-200 dark:hover:bg-dark-border transition-colors"><i class="fab fa-figma mr-1.5"></i>Figma</a>
+                                <button onclick="openModal(2)" class="flex-1 text-center px-4 py-2 rounded-lg bg-primary-50 dark:bg-primary-950/50 text-primary-600 dark:text-primary-400 text-sm font-medium hover:bg-primary-100 dark:hover:bg-primary-900/50 transition-colors"><i class="fas fa-info-circle mr-1.5"></i>Detail Proyek</button>
+                                <a href="https://www.figma.com" target="_blank" class="flex-1 text-center px-4 py-2 rounded-lg bg-gray-100 dark:bg-dark-card text-gray-600 dark:text-gray-400 text-sm font-medium hover:bg-gray-200 dark:hover:bg-dark-border transition-colors"><i class="fab fa-figma mr-1.5"></i>Figma</a>
                             </div>
                         </div>
                     </div>
@@ -513,8 +514,8 @@
                                 <span class="skill-tag px-2.5 py-1 rounded-md bg-green-50 dark:bg-green-950/40 text-green-600 dark:text-green-400 text-xs font-medium">CMS</span>
                             </div>
                             <div class="flex gap-3">
-                                <a href="#" class="flex-1 text-center px-4 py-2 rounded-lg bg-primary-50 dark:bg-primary-950/50 text-primary-600 dark:text-primary-400 text-sm font-medium hover:bg-primary-100 dark:hover:bg-primary-900/50 transition-colors"><i class="fas fa-external-link-alt mr-1.5"></i>Demo</a>
-                                <a href="#" class="flex-1 text-center px-4 py-2 rounded-lg bg-gray-100 dark:bg-dark-card text-gray-600 dark:text-gray-400 text-sm font-medium hover:bg-gray-200 dark:hover:bg-dark-border transition-colors"><i class="fab fa-github mr-1.5"></i>Code</a>
+                                <button onclick="openModal(3)" class="flex-1 text-center px-4 py-2 rounded-lg bg-primary-50 dark:bg-primary-950/50 text-primary-600 dark:text-primary-400 text-sm font-medium hover:bg-primary-100 dark:hover:bg-primary-900/50 transition-colors"><i class="fas fa-info-circle mr-1.5"></i>Detail Proyek</button>
+                                <a href="https://github.com/jimmyfernando" target="_blank" class="flex-1 text-center px-4 py-2 rounded-lg bg-gray-100 dark:bg-dark-card text-gray-600 dark:text-gray-400 text-sm font-medium hover:bg-gray-200 dark:hover:bg-dark-border transition-colors"><i class="fab fa-github mr-1.5"></i>GitHub</a>
                             </div>
                         </div>
                     </div>
@@ -538,7 +539,7 @@
                                 <span class="skill-tag px-2.5 py-1 rounded-md bg-teal-50 dark:bg-teal-950/40 text-teal-600 dark:text-teal-400 text-xs font-medium">Motion</span>
                             </div>
                             <div class="flex gap-3">
-                                <a href="#" class="w-full text-center px-4 py-2 rounded-lg bg-primary-50 dark:bg-primary-950/50 text-primary-600 dark:text-primary-400 text-sm font-medium hover:bg-primary-100 dark:hover:bg-primary-900/50 transition-colors"><i class="fas fa-play mr-1.5"></i>Lihat Portofolio</a>
+                                <button onclick="openModal(4)" class="w-full text-center px-4 py-2 rounded-lg bg-primary-50 dark:bg-primary-950/50 text-primary-600 dark:text-primary-400 text-sm font-medium hover:bg-primary-100 dark:hover:bg-primary-900/50 transition-colors"><i class="fas fa-info-circle mr-1.5"></i>Detail Portofolio</button>
                             </div>
                         </div>
                     </div>
@@ -561,7 +562,7 @@
                                 <span class="skill-tag px-2.5 py-1 rounded-md bg-emerald-50 dark:bg-emerald-950/40 text-emerald-600 dark:text-emerald-400 text-xs font-medium">Roblox</span>
                             </div>
                             <div class="flex gap-3">
-                                <a href="#" class="w-full text-center px-4 py-2 rounded-lg bg-primary-50 dark:bg-primary-950/50 text-primary-600 dark:text-primary-400 text-sm font-medium hover:bg-primary-100 dark:hover:bg-primary-900/50 transition-colors"><i class="fas fa-external-link-alt mr-1.5"></i>Channel</a>
+                                <button onclick="openModal(5)" class="w-full text-center px-4 py-2 rounded-lg bg-primary-50 dark:bg-primary-950/50 text-primary-600 dark:text-primary-400 text-sm font-medium hover:bg-primary-100 dark:hover:bg-primary-900/50 transition-colors"><i class="fas fa-info-circle mr-1.5"></i>Detail Kanal & Live</button>
                             </div>
                         </div>
                     </div>
@@ -584,7 +585,7 @@
                                 <span class="skill-tag px-2.5 py-1 rounded-md bg-amber-50 dark:bg-amber-950/40 text-amber-600 dark:text-amber-400 text-xs font-medium">Itemku</span>
                             </div>
                             <div class="flex gap-3">
-                                <a href="#" class="w-full text-center px-4 py-2 rounded-lg bg-primary-50 dark:bg-primary-950/50 text-primary-600 dark:text-primary-400 text-sm font-medium hover:bg-primary-100 dark:hover:bg-primary-900/50 transition-colors"><i class="fas fa-external-link-alt mr-1.5"></i>Lihat</a>
+                                <button onclick="openModal(6)" class="w-full text-center px-4 py-2 rounded-lg bg-primary-50 dark:bg-primary-950/50 text-primary-600 dark:text-primary-400 text-sm font-medium hover:bg-primary-100 dark:hover:bg-primary-900/50 transition-colors"><i class="fas fa-info-circle mr-1.5"></i>Detail Proyek</button>
                             </div>
                         </div>
                     </div>
@@ -915,6 +916,44 @@
         </div>
     </footer>
 
+    <!-- ==================== PROJECT DETAILS MODAL ==================== -->
+    <div id="projectModal" class="fixed inset-0 z-50 flex items-center justify-center p-4 sm:p-6 opacity-0 pointer-events-none transition-all duration-300">
+        <div class="fixed inset-0 bg-black/60 backdrop-blur-sm transition-opacity" onclick="closeModal()"></div>
+        <div class="relative w-full max-w-2xl bg-white dark:bg-dark-card border border-gray-200 dark:border-dark-border rounded-2xl shadow-2xl overflow-hidden transform scale-95 transition-transform duration-300 max-h-[90vh] flex flex-col z-10">
+            <!-- Modal Header -->
+            <div id="modalHeader" class="p-6 gradient-bg text-white relative">
+                <button onclick="closeModal()" class="absolute top-4 right-4 w-9 h-9 rounded-full bg-black/20 hover:bg-black/40 text-white flex items-center justify-center transition-colors">
+                    <i class="fas fa-times"></i>
+                </button>
+                <span id="modalCategory" class="inline-block px-3 py-1 rounded-full bg-white/20 text-xs font-semibold uppercase tracking-wider mb-2">Web Application</span>
+                <h3 id="modalTitle" class="text-2xl font-display font-bold">Judul Proyek</h3>
+                <p id="modalOrg" class="text-white/80 text-sm mt-1">Organisasi / Kategori</p>
+            </div>
+            <!-- Modal Body -->
+            <div class="p-6 overflow-y-auto space-y-5 text-gray-700 dark:text-gray-300 text-sm">
+                <div>
+                    <h4 class="font-bold text-gray-900 dark:text-white uppercase tracking-wider text-xs mb-2">Deskripsi Proyek</h4>
+                    <p id="modalDesc" class="leading-relaxed text-gray-600 dark:text-gray-400"></p>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 dark:text-white uppercase tracking-wider text-xs mb-2">Pencapaian & Fitur Utama</h4>
+                    <ul id="modalFeatures" class="space-y-2 text-gray-600 dark:text-gray-400"></ul>
+                </div>
+                <div>
+                    <h4 class="font-bold text-gray-900 dark:text-white uppercase tracking-wider text-xs mb-2">Teknologi & Perangkat</h4>
+                    <div id="modalTech" class="flex flex-wrap gap-2"></div>
+                </div>
+            </div>
+            <!-- Modal Footer -->
+            <div class="p-4 bg-gray-50 dark:bg-dark-bg/60 border-t border-gray-200 dark:border-dark-border flex items-center justify-end gap-3">
+                <button onclick="closeModal()" class="px-5 py-2.5 rounded-xl border border-gray-300 dark:border-dark-border text-gray-700 dark:text-gray-300 hover:bg-gray-100 dark:hover:bg-dark-card font-medium transition-colors text-sm">Tutup</button>
+                <a id="modalLink" href="https://github.com/jimmyfernando" target="_blank" class="px-5 py-2.5 rounded-xl gradient-bg text-white font-medium shadow-md shadow-primary-500/20 hover:scale-105 transition-all text-sm flex items-center gap-1.5">
+                    <i class="fab fa-github"></i> Kunjungi Repositori
+                </a>
+            </div>
+        </div>
+    </div>
+
     <!-- ==================== BACK TO TOP ==================== -->
     <button id="backToTop" class="fixed bottom-6 right-6 w-12 h-12 rounded-xl gradient-bg text-white shadow-lg shadow-primary-500/25 flex items-center justify-center opacity-0 pointer-events-none transition-all duration-300 hover:scale-110 z-50">
         <i class="fas fa-arrow-up"></i>
@@ -1093,35 +1132,34 @@
             particlesContainer.appendChild(particle);
         }
 
-        // ===== Typing Effect for Hero (optional subtle touch) =====
-        const roles = ['Fullstack Developer', 'UI/UX Enthusiast', 'Web Designer', 'Problem Solver'];
+        // ===== Typing Effect for Hero =====
+        const roles = ['Fullstack Developer', 'UI/UX Enthusiast', 'Web Developer', 'Problem Solver'];
         let roleIndex = 0;
         let charIndex = 0;
         let isDeleting = false;
         const typingEl = document.querySelector('.typing-text');
 
-        if (typingEl) {
-            function typeRole() {
-                const current = roles[roleIndex];
-                if (isDeleting) {
-                    typingEl.textContent = current.substring(0, charIndex - 1);
-                    charIndex--;
-                } else {
-                    typingEl.textContent = current.substring(0, charIndex + 1);
-                    charIndex++;
-                }
-
-                if (!isDeleting && charIndex === current.length) {
-                    setTimeout(() => isDeleting = true, 2000);
-                } else if (isDeleting && charIndex === 0) {
-                    isDeleting = false;
-                    roleIndex = (roleIndex + 1) % roles.length;
-                }
-
-                setTimeout(typeRole, isDeleting ? 50 : 100);
+        function typeRole() {
+            if (!typingEl) return;
+            const current = roles[roleIndex];
+            if (isDeleting) {
+                typingEl.textContent = current.substring(0, charIndex - 1);
+                charIndex--;
+            } else {
+                typingEl.textContent = current.substring(0, charIndex + 1);
+                charIndex++;
             }
-            typeRole();
+
+            if (!isDeleting && charIndex === current.length) {
+                setTimeout(() => isDeleting = true, 2000);
+            } else if (isDeleting && charIndex === 0) {
+                isDeleting = false;
+                roleIndex = (roleIndex + 1) % roles.length;
+            }
+
+            setTimeout(typeRole, isDeleting ? 45 : 90);
         }
+        setTimeout(typeRole, 400);
 
         // ===== Smooth scroll for all anchor links =====
         document.querySelectorAll('a[href^="#"]').forEach(anchor => {
@@ -1135,7 +1173,10 @@
         });
 
         // ===== Counter Animation for Stats =====
+        let counted = false;
         function animateCounters() {
+            if (counted) return;
+            counted = true;
             document.querySelectorAll('[data-count]').forEach(counter => {
                 const target = parseFloat(counter.dataset.count);
                 const duration = 2000;
@@ -1153,6 +1194,157 @@
                 requestAnimationFrame(update);
             });
         }
+
+        const statsSection = document.getElementById('statsContainer');
+        if (statsSection) {
+            const statsObserver = new IntersectionObserver((entries) => {
+                if (entries[0].isIntersecting) {
+                    animateCounters();
+                    statsObserver.unobserve(statsSection);
+                }
+            }, { threshold: 0.2 });
+            statsObserver.observe(statsSection);
+        }
+
+        // ===== Project Details Data & Modal =====
+        const projectData = {
+            1: {
+                title: "Sistem Quality Control Klaim Produk",
+                category: "Fullstack Web Application",
+                org: "PT. Metinca Prima Industrial Works (Final Project)",
+                desc: "Sistem manajemen penanganan klaim produk rusak secara komprehensif dan end-to-end. Memfasilitasi portal pengajuan tiket oleh pelanggan hingga modul investigasi tim internal untuk mempercepat resolusi dan akurasi komplain.",
+                features: [
+                    "Portal komplain terpadu dilengkapi formulir ringkas dan intuitif",
+                    "Fitur unggah bukti digital (foto kerusakan, batch produksi) dengan validasi berkas terpusat",
+                    "Otomatisasi pengelompokan jenis cacat produk guna memangkas durasi audit Staff QC",
+                    "Dashboard pemantauan tiket QC berbasis SLA secara real-time dan transparan",
+                    "Perancangan arsitektur basis data relasional MySQL untuk histori keluhan dan laporan manajemen"
+                ],
+                tech: ["Laravel", "PHP", "MySQL", "Tailwind CSS", "JavaScript", "Blade Engine"],
+                link: "https://github.com/jimmyfernando"
+            },
+            2: {
+                title: "UI/UX Mobile Application & Design System",
+                category: "Mobile Design & Prototyping",
+                org: "Self Project · Figma",
+                desc: "Perancangan pengalaman pengguna (UX) dan antarmuka visual (UI) aplikasi mobile mulai dari sketsa alur pengguna, wireframing resolusi tinggi, hingga prototipe interaktif realistis.",
+                features: [
+                    "Penyusunan kerangka desain (wireframe high-fidelity) dengan tata letak proporsional",
+                    "Pembuatan komponen UI atomik terstandarisasi (tombol, formulir, icon pack, navigasi)",
+                    "Prototipe interaktif untuk mensimulasikan uji coba pengalaman pengguna",
+                    "Penerapan animasi mikro dan transisi halus antar-layar"
+                ],
+                tech: ["Figma", "UI/UX Design", "Wireframing", "Interactive Prototyping", "Design System"],
+                link: "https://www.figma.com"
+            },
+            3: {
+                title: "Redesign & Modernisasi Website Perusahaan",
+                category: "Front-End & CMS Development",
+                org: "PT. Rezeki Utami Sejahtera (Internship)",
+                desc: "Pembaruan menyeluruh terhadap antarmuka dan pengalaman pengguna situs web perusahaan guna meningkatkan kredibilitas brand, estetika modern, dan kenyamanan navigasi klien.",
+                features: [
+                    "Merombak antarmuka pengguna (UI) lama menjadi tampilan segar, elegan, dan profesional",
+                    "Implementasi desain responsif pada CMS WordPress untuk semua resolusi layar",
+                    "Penyusunan log kemajuan pengembangan berkala untuk laporan manajemen",
+                    "Presentasi langsung konsep UI/UX di hadapan stakeholder perusahaan"
+                ],
+                tech: ["WordPress", "HTML5", "CSS3", "JavaScript", "UI/UX Design", "Responsive Layout"],
+                link: "https://github.com/jimmyfernando"
+            },
+            4: {
+                title: "Short Video Creative Production",
+                category: "Multimedia & Video Editing",
+                org: "Self Project · CapCut",
+                desc: "Produksi konten video kreatif berdurasi pendek dengan optimasi engagement tinggi pada platform digital melalui editing visual dan audio yang terstruktur.",
+                features: [
+                    "Pemangkasan selektif footage mentah guna mempertahankan momen kunci terbaik",
+                    "Penyelarasan audio multi-track: eliminasi noise, penyeimbangan volume, dan backsound",
+                    "Transisi dinamis dan sinematik yang menghubungkan alur cerita secara mulus",
+                    "Integrasi motion graphics, tipografi judul, dan caption otomatis"
+                ],
+                tech: ["CapCut", "Audio Mixing", "Motion Typography", "Color Grading", "Content Strategy"],
+                link: "https://github.com/jimmyfernando"
+            },
+            5: {
+                title: "Game Livestreaming & Community Building",
+                category: "Live Broadcasting",
+                org: "Self Project · TikTok Live Studio",
+                desc: "Aktivitas penyiaran langsung (livestreaming) interaktif di ekosistem game Roblox untuk membangun audiens aktif serta mempertahankan retensi penonton secara konsisten.",
+                features: [
+                    "Streaming real-time interaktif dengan engagement audiens yang aktif",
+                    "Pengaturan software broadcasting (TikTok Live Studio) untuk performa video dan audio terbaik",
+                    "Kreativitas gameplay dinamis yang mampu menarik minat penonton baru",
+                    "Interaksi komunikatif secara langsung merespons obrolan live chat"
+                ],
+                tech: ["TikTok Live Studio", "Roblox", "Broadcasting", "Audience Engagement", "Streaming"],
+                link: "https://github.com/jimmyfernando"
+            },
+            6: {
+                title: "Digital Commerce & Customer Relations",
+                category: "Virtual Marketplace",
+                org: "Self Project · Facebook / Itemku",
+                desc: "Pengelolaan aktivitas jual beli komoditas virtual dalam platform marketplace khusus gaming dengan mengedepankan kecepatan respon dan kepercayaan konsumen.",
+                features: [
+                    "Pengelolaan transaksi pembelian dan penjualan item Roblox bernilai ekonomi",
+                    "Komunikasi langsung yang transparan dan informatif kepada setiap pelanggan",
+                    "Manajemen reputasi toko digital dengan penyelesaian pesanan tepat waktu",
+                    "Analisis tren harga dan permintaan pasar item digital"
+                ],
+                tech: ["Itemku", "Facebook Marketplace", "CRM", "E-Commerce", "Digital Assets"],
+                link: "https://github.com/jimmyfernando"
+            }
+        };
+
+        const modal = document.getElementById('projectModal');
+        const modalTitle = document.getElementById('modalTitle');
+        const modalCategory = document.getElementById('modalCategory');
+        const modalOrg = document.getElementById('modalOrg');
+        const modalDesc = document.getElementById('modalDesc');
+        const modalFeatures = document.getElementById('modalFeatures');
+        const modalTech = document.getElementById('modalTech');
+        const modalLink = document.getElementById('modalLink');
+
+        function openModal(id) {
+            const data = projectData[id];
+            if (!data) return;
+
+            modalTitle.textContent = data.title;
+            modalCategory.textContent = data.category;
+            modalOrg.textContent = data.org;
+            modalDesc.textContent = data.desc;
+            modalLink.href = data.link;
+
+            // Features list
+            modalFeatures.innerHTML = data.features.map(f => `
+                <li class="flex items-start gap-2.5">
+                    <i class="fas fa-check-circle text-primary-500 mt-1 shrink-0"></i>
+                    <span>${f}</span>
+                </li>
+            `).join('');
+
+            // Tech badges
+            modalTech.innerHTML = data.tech.map(t => `
+                <span class="px-2.5 py-1 rounded-md bg-primary-50 dark:bg-primary-950/50 text-primary-600 dark:text-primary-400 text-xs font-semibold border border-primary-200 dark:border-primary-800">${t}</span>
+            `).join('');
+
+            modal.classList.remove('opacity-0', 'pointer-events-none');
+            modal.classList.add('opacity-100');
+            modal.querySelector('.transform').classList.remove('scale-95');
+            modal.querySelector('.transform').classList.add('scale-100');
+            document.body.style.overflow = 'hidden';
+        }
+
+        function closeModal() {
+            modal.classList.add('opacity-0', 'pointer-events-none');
+            modal.classList.remove('opacity-100');
+            modal.querySelector('.transform').classList.add('scale-95');
+            modal.querySelector('.transform').classList.remove('scale-100');
+            document.body.style.overflow = '';
+        }
+
+        window.addEventListener('keydown', (e) => {
+            if (e.key === 'Escape') closeModal();
+        });
     </script>
 </body>
 </html>
