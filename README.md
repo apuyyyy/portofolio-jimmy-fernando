@@ -95,6 +95,6 @@ Jika ingin mengaktifkan GitHub Pages secara langsung:
 
 ## 👤 Kontak Jimmy Fernando
 
-- **Email**: jimmyfrnn12@gmail.com
+- **Email**: jimmyfrnnd12@gmail.com
 - **Telepon / WhatsApp**: +62 813 8464 8798
 - **Lokasi**: Cakung Timur, Jakarta Timur, DKI Jakarta
