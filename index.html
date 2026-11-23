@@ -201,17 +201,17 @@
     .button-secondary:hover { background: var(--accent-wash); border-color: var(--accent); color: var(--ink); }
     .button-arrow { color: var(--gold); font-size: 14px; font-weight: 400; }
 
-    .hero-art { position: relative; min-height: 360px; overflow: hidden; border: 1px solid var(--line-strong); border-radius: 3px; background: var(--surface); box-shadow: var(--shadow); isolation: isolate; }
+    .hero-art { position: relative; min-height: 380px; overflow: hidden; border: 1px solid var(--line-strong); border-radius: 3px; background: var(--surface); box-shadow: var(--shadow); isolation: isolate; }
     .hero-art::before { position: absolute; z-index: 3; top: 26px; right: 25px; bottom: 26px; left: 25px; border: 1px solid var(--line); content: ''; pointer-events: none; }
     .art-grid { position: absolute; inset: 0; z-index: 0; opacity: .35; background-image: linear-gradient(var(--line) 1px, transparent 1px), linear-gradient(90deg, var(--line) 1px, transparent 1px); background-size: 38px 38px; mask-image: linear-gradient(to bottom, black, transparent 90%); }
-    .art-portrait { position: absolute; z-index: 1; top: 46%; left: 50%; width: min(72%, 248px); aspect-ratio: 1; border: 1px solid var(--line-strong); object-fit: cover; object-position: center 20%; box-shadow: 0 18px 38px rgba(0, 0, 0, .2); transform: translate(-50%, -50%); transition: transform .4s cubic-bezier(.16, 1, .3, 1), box-shadow .4s ease; border-radius: 2px; }
+    .art-portrait { position: absolute; z-index: 1; top: 46%; left: 50%; width: min(72%, 248px); aspect-ratio: 1; border: 1px solid var(--line-strong); object-fit: cover; object-position: center center; box-shadow: 0 18px 38px rgba(0, 0, 0, .2); transform: translate(-50%, -50%); transition: transform .4s cubic-bezier(.16, 1, .3, 1), box-shadow .4s ease; border-radius: 2px; }
     .hero-art:hover .art-portrait { box-shadow: 0 24px 48px rgba(0, 0, 0, .35); transform: translate(-50%, -50%) scale(1.03); }
-    .art-index { position: absolute; z-index: 4; top: 45px; left: 45px; color: var(--muted); font: 9px 'DM Mono', monospace; letter-spacing: .08em; }
+    .art-index { position: absolute; z-index: 4; top: 40px; left: 40px; color: var(--muted); font: 9px 'DM Mono', monospace; letter-spacing: .08em; }
     .art-index::before { display: inline-block; width: 7px; height: 7px; margin-right: 8px; border-radius: 50%; background: var(--gold); content: ''; }
-    .art-signature { position: absolute; z-index: 4; right: 45px; bottom: 45px; left: 45px; }
+    .art-signature { position: absolute; z-index: 4; right: 40px; bottom: 38px; left: 40px; pointer-events: none; }
     .art-signature strong { display: block; font-size: 13px; letter-spacing: -.02em; }
     .art-signature small { display: block; color: var(--muted); font: 9px 'DM Mono', monospace; margin-top: 2px; }
-    .art-side-note { position: absolute; z-index: 4; right: 26px; bottom: 45px; writing-mode: vertical-rl; color: var(--muted); font: 9px 'DM Mono', monospace; letter-spacing: .08em; }
+    .art-side-note { position: absolute; z-index: 4; right: 26px; bottom: 40px; writing-mode: vertical-rl; color: var(--muted); font: 9px 'DM Mono', monospace; letter-spacing: .08em; }
 
     /* ==========================================================================
        CORE SKILLS DIVIDER STRIP
